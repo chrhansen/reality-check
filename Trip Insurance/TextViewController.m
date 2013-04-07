@@ -66,7 +66,9 @@
                   @"Still tripping? Hmmm. You probably shouldn’t be. But don’t be TOO concerned.",
                   @"Why would you bother to trip out this hard, if you’re just going to spend the entire time worrying.",
                   @"You’re not STILL tripping, are you?",
-                  @"Still tripping? Better get back to Reality Check (TM)"] mutableCopy];
+                  @"Oh, boy. Better get back to RealityCheck (TM)",
+                  @"Don’t want to trip forever? You should probably Upgrade Your Reality (TM)"]
+                  mutableCopy];
 }
 
 
