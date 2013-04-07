@@ -19,6 +19,18 @@
 
 @interface ChoseRealityViewController : UIViewController
 
+- (IBAction)toggleHellModeTapped:(id)sender;
+
+
+
+@property (weak, nonatomic) IBOutlet UIButton *linkedInButton;
+@property (weak, nonatomic) IBOutlet UIButton *tripTrackerButton;
+@property (weak, nonatomic) IBOutlet UIButton *textMessageButton;
+@property (weak, nonatomic) IBOutlet UIButton *playWithPuppiesButton;
+@property (weak, nonatomic) IBOutlet UIButton *hellModeButton;
+@property (weak, nonatomic) IBOutlet UIButton *soothingSoundsButton;
+
+
 @property (nonatomic, weak) id<ChoseRealityViewControllerDelegate> delegate;
 
 @end

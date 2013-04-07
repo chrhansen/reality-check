@@ -101,4 +101,6 @@
 
 // HELL MODE
 
+- (IBAction)toggleHellModeTapped:(id)sender {
+}
 @end
