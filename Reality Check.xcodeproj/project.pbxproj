@@ -64,8 +64,8 @@
 		E5A20C831710FEB400DB912F /* RCTwilioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C821710FEB400DB912F /* RCTwilioHelper.m */; };
 		E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */; };
 		E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B94B181711FC1300AD960F /* TripTrackerViewController.m */; };
-		E5B94B1D1711FD2500AD960F /* realityCheck_tripTrackerBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B1B1711FD2500AD960F /* realityCheck_tripTrackerBlank.png */; };
-		E5B94B1E1711FD2500AD960F /* realityCheck_tripTrackerComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B1C1711FD2500AD960F /* realityCheck_tripTrackerComplete.png */; };
+		E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */; };
+		E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,8 +156,8 @@
 		E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_crackedOverlay@2x.png"; sourceTree = "<group>"; };
 		E5B94B171711FC1300AD960F /* TripTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTrackerViewController.h; sourceTree = "<group>"; };
 		E5B94B181711FC1300AD960F /* TripTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTrackerViewController.m; sourceTree = "<group>"; };
-		E5B94B1B1711FD2500AD960F /* realityCheck_tripTrackerBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerBlank.png; sourceTree = "<group>"; };
-		E5B94B1C1711FD2500AD960F /* realityCheck_tripTrackerComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerComplete.png; sourceTree = "<group>"; };
+		E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerBlank.png; sourceTree = "<group>"; };
+		E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerComplete.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,8 +389,8 @@
 		E5B94B1A1711FD1A00AD960F /* TripTracker */ = {
 			isa = PBXGroup;
 			children = (
-				E5B94B1B1711FD2500AD960F /* realityCheck_tripTrackerBlank.png */,
-				E5B94B1C1711FD2500AD960F /* realityCheck_tripTrackerComplete.png */,
+				E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */,
+				E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */,
 			);
 			name = TripTracker;
 			sourceTree = "<group>";
@@ -467,8 +467,8 @@
 				E51373CB1711F36800F0F279 /* btn_realityCheck_btn_soothingSoungFlie_x2.png in Resources */,
 				E51373CC1711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png in Resources */,
 				E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */,
-				E5B94B1D1711FD2500AD960F /* realityCheck_tripTrackerBlank.png in Resources */,
-				E5B94B1E1711FD2500AD960F /* realityCheck_tripTrackerComplete.png in Resources */,
+				E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */,
+				E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

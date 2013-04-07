@@ -521,7 +521,7 @@
                             <imageView contentMode="scaleToFill" image="realityCheck_tripTrackerBlank.png" translatesAutoresizingMaskIntoConstraints="NO" id="azp-Ms-E20">
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="realityCheck_tripTrackerComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKJ-UL-WLY"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="realityCheck_tripTrackerComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKJ-UL-WLY"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -725,8 +725,8 @@
         <image name="btn_realityCheck_btn_upgrade_@2x.png" width="278" height="45"/>
         <image name="realityCheck_loginPage_linkedInLogo.png" width="282" height="62"/>
         <image name="realityCheck_loginPage_logo.png" width="512" height="177"/>
-        <image name="realityCheck_tripTrackerBlank.png" width="642" height="1136"/>
-        <image name="realityCheck_tripTrackerComplete.png" width="642" height="1136"/>
+        <image name="realityCheck_tripTrackerBlank.png" width="640" height="1008"/>
+        <image name="realityCheck_tripTrackerComplete.png" width="640" height="1008"/>
     </resources>
     <classes>
         <class className="ChoseRealityViewController" superclassName="UIViewController">
@@ -795,8 +795,8 @@
         <class className="TripTrackerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TripTrackerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeForm:"/>
                 <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="handleTap:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="emptyFormImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="filledFormImageView" candidateClass="UIImageView"/>
             </relationships>

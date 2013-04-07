@@ -46,8 +46,13 @@
 
 - (IBAction)changeForm:(id)sender
 {
-    self.emptyFormImageView.hidden = YES;
-    self.filledFormImageView.hidden = NO;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.emptyFormImageView.alpha = 0.0f;
+        self.filledFormImageView.alpha = 1.0f;
+
+    }];
+//    self.emptyFormImageView.hidden = YES;
+//    self.filledFormImageView.hidden = NO;
 }
 
 @end
