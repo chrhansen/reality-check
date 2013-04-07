@@ -536,7 +536,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D62-Es-KSO">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="compose" id="lnO-Wv-f6h">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="lnO-Wv-f6h">
                             <connections>
                                 <action selector="changeForm:" destination="Xfu-WZ-gAG" id="JfU-Yg-b4g"/>
                             </connections>
