@@ -18,6 +18,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *recommendationNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *skillCountLabel;
 
+#pragma mark Animation
+@property (weak, nonatomic) IBOutlet UILabel *animatedLabel;
+
+
+
+
 - (IBAction)doneTapped:(id)sender;
 
 @end

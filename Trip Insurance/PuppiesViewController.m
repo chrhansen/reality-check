@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     [self showHTMLString:PUPPY_URL];
+    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
+    self.navigationItem.titleView = titleView;
 	// Do any additional setup after loading the view.
 }
 

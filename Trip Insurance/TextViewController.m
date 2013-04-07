@@ -32,6 +32,8 @@
     [super viewDidLoad];
     [self loadTexts];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(sendAText:) userInfo:nil repeats:YES];
+    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
+    self.navigationItem.titleView = titleView;
 }
 
 

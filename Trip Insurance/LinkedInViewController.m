@@ -29,7 +29,17 @@
     [super viewDidLoad];
     [self loadProfile];
     [self loadHighResPhoto];
+    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
+    self.navigationItem.titleView = titleView;
+
 	// Do any additional setup after loading the view.
+}
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+//    [self testAnimation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +70,6 @@
         NSLog(@"error: %@", error.localizedDescription);
     }];
 }
-
 
 
 
@@ -102,4 +111,22 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+
+#pragma mark animations
+- (void)testAnimation
+{
+    [UIView animateWithDuration:2.0 animations:^{
+        CGAffineTransform transform = self.animatedLabel.transform;
+        transform = CGAffineTransformTranslate(transform, -180.0f, -130.0f);
+//        transform = CGAffineTransformRotate(transform, -M_PI_4);
+        self.animatedLabel.transform = transform;
+    } completion:^(BOOL finished) {
+        NSLog(@"next anim");
+    }];
+}
+
+
 @end
