@@ -117,11 +117,13 @@ typedef enum {
         self.state = RealityStateHellMode;
         [self loadAlerts];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(sendAlert:) userInfo:nil repeats:YES];
+        [self stopMusic];
 
     } else {
         self.state = RealityStateNormal;
         [self.timer invalidate];
         self.timer = nil;
+        [self startMusicIfNotPlaying];
     }
     
     [self updateButtonPhotos];

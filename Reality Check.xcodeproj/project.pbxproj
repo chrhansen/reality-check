@@ -26,7 +26,6 @@
 		E51373CA1711F36800F0F279 /* btn_realityCheck_btn_reassuringTextMessages_x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373C41711F36800F0F279 /* btn_realityCheck_btn_reassuringTextMessages_x2.png */; };
 		E51373CB1711F36800F0F279 /* btn_realityCheck_btn_soothingSoungFlie_x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373C51711F36800F0F279 /* btn_realityCheck_btn_soothingSoungFlie_x2.png */; };
 		E51373CC1711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373C61711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png */; };
-		E51373CE1711F50500F0F279 /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373CD1711F50500F0F279 /* realityCheck_crackedOverlay@2x.png */; };
 		E5375FB21710C122008F378B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5375FB11710C122008F378B /* UIKit.framework */; };
 		E5375FB41710C122008F378B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5375FB31710C122008F378B /* Foundation.framework */; };
 		E5375FB61710C122008F378B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5375FB51710C122008F378B /* CoreGraphics.framework */; };
@@ -63,6 +62,10 @@
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
 		E5A20C7F1710FE1700DB912F /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C7E1710FE1700DB912F /* TextViewController.m */; };
 		E5A20C831710FEB400DB912F /* RCTwilioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C821710FEB400DB912F /* RCTwilioHelper.m */; };
+		E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */; };
+		E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B94B181711FC1300AD960F /* TripTrackerViewController.m */; };
+		E5B94B1D1711FD2500AD960F /* realityCheck_tripTrackerBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B1B1711FD2500AD960F /* realityCheck_tripTrackerBlank.png */; };
+		E5B94B1E1711FD2500AD960F /* realityCheck_tripTrackerComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B1C1711FD2500AD960F /* realityCheck_tripTrackerComplete.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +89,6 @@
 		E51373C41711F36800F0F279 /* btn_realityCheck_btn_reassuringTextMessages_x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_realityCheck_btn_reassuringTextMessages_x2.png; sourceTree = "<group>"; };
 		E51373C51711F36800F0F279 /* btn_realityCheck_btn_soothingSoungFlie_x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_realityCheck_btn_soothingSoungFlie_x2.png; sourceTree = "<group>"; };
 		E51373C61711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_realityCheck_btn_tripTracker_x2.png; sourceTree = "<group>"; };
-		E51373CD1711F50500F0F279 /* realityCheck_crackedOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_crackedOverlay@2x.png"; sourceTree = "<group>"; };
 		E5375FAE1710C122008F378B /* Reality Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reality Check.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5375FB11710C122008F378B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E5375FB31710C122008F378B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -151,6 +153,11 @@
 		E5A20C7E1710FE1700DB912F /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		E5A20C811710FEB400DB912F /* RCTwilioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTwilioHelper.h; sourceTree = "<group>"; };
 		E5A20C821710FEB400DB912F /* RCTwilioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTwilioHelper.m; sourceTree = "<group>"; };
+		E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_crackedOverlay@2x.png"; sourceTree = "<group>"; };
+		E5B94B171711FC1300AD960F /* TripTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTrackerViewController.h; sourceTree = "<group>"; };
+		E5B94B181711FC1300AD960F /* TripTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTrackerViewController.m; sourceTree = "<group>"; };
+		E5B94B1B1711FD2500AD960F /* realityCheck_tripTrackerBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerBlank.png; sourceTree = "<group>"; };
+		E5B94B1C1711FD2500AD960F /* realityCheck_tripTrackerComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerComplete.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +192,7 @@
 		E51373881711245700F0F279 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E5B94B1A1711FD1A00AD960F /* TripTracker */,
 				E51373B81711F1DD00F0F279 /* Hell Mode */,
 				E51373B21711E8DA00F0F279 /* realityCheck_menuBarLogo@2x.png */,
 				E51373891711246B00F0F279 /* realityCheck_backgroundGradient@2x.png */,
@@ -197,7 +205,7 @@
 		E51373B81711F1DD00F0F279 /* Hell Mode */ = {
 			isa = PBXGroup;
 			children = (
-				E51373CD1711F50500F0F279 /* realityCheck_crackedOverlay@2x.png */,
+				E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */,
 				E51373B91711F22F00F0F279 /* btn_realityCheck_btn_confirmYourIdentity_broken@2x.png */,
 				E51373BA1711F22F00F0F279 /* btn_realityCheck_btn_playWithPuppies_broken@2x.png */,
 				E51373BB1711F22F00F0F279 /* btn_realityCheck_btn_reassuringTextMessages_broken@2x.png */,
@@ -366,6 +374,8 @@
 			children = (
 				E5375FFD1710D85B008F378B /* LinkedInViewController.h */,
 				E5375FFE1710D85B008F378B /* LinkedInViewController.m */,
+				E5B94B171711FC1300AD960F /* TripTrackerViewController.h */,
+				E5B94B181711FC1300AD960F /* TripTrackerViewController.m */,
 				E5A20C7D1710FE1700DB912F /* TextViewController.h */,
 				E5A20C7E1710FE1700DB912F /* TextViewController.m */,
 				E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */,
@@ -374,6 +384,15 @@
 				E51373A81711775200F0F279 /* MusicViewController.m */,
 			);
 			name = "Reality View Controllers";
+			sourceTree = "<group>";
+		};
+		E5B94B1A1711FD1A00AD960F /* TripTracker */ = {
+			isa = PBXGroup;
+			children = (
+				E5B94B1B1711FD2500AD960F /* realityCheck_tripTrackerBlank.png */,
+				E5B94B1C1711FD2500AD960F /* realityCheck_tripTrackerComplete.png */,
+			);
+			name = TripTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,7 +466,9 @@
 				E51373CA1711F36800F0F279 /* btn_realityCheck_btn_reassuringTextMessages_x2.png in Resources */,
 				E51373CB1711F36800F0F279 /* btn_realityCheck_btn_soothingSoungFlie_x2.png in Resources */,
 				E51373CC1711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png in Resources */,
-				E51373CE1711F50500F0F279 /* realityCheck_crackedOverlay@2x.png in Resources */,
+				E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */,
+				E5B94B1D1711FD2500AD960F /* realityCheck_tripTrackerBlank.png in Resources */,
+				E5B94B1E1711FD2500AD960F /* realityCheck_tripTrackerComplete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +505,7 @@
 				E5A20C831710FEB400DB912F /* RCTwilioHelper.m in Sources */,
 				E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */,
 				E51373A91711775200F0F279 /* MusicViewController.m in Sources */,
+				E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
