@@ -35,15 +35,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
+    self.navigationItem.titleView = titleView;
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self testMusic];
+    [self playMusic];
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self stopMusic];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,12 +59,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-- (void)testMusic
+- (void)playMusic
 {
-    self.rdio = [[Rdio alloc] initWithConsumerKey:RDIO_KEY andSecret:RDIO_SECRET delegate:self];
-    [self.rdio.player playSource:@"t2742133"];
+    if (!self.rdio) {
+        self.rdio = [[Rdio alloc] initWithConsumerKey:RDIO_KEY andSecret:RDIO_SECRET delegate:self];
+    }
+    [self.rdio.player playSource:@"t2626158"];  // try Enya: http://rd.io/x/QQ9HNzdNn0g/
+}
+
+
+- (void)stopMusic
+{
+    [self.rdio.player stop];
 }
 
 
@@ -66,5 +80,9 @@
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
 
+}
+- (IBAction)tappedDone:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

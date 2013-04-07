@@ -10,4 +10,6 @@
 
 @interface MusicViewController : UIViewController
 
+- (IBAction)tappedDone:(id)sender;
+
 @end

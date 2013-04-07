@@ -38,10 +38,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jaa-Ll-g1f" firstAttribute="top" secondItem="UoM-BS-DXR" secondAttribute="top" constant="152" id="6Rz-IN-ma9"/>
-                            <constraint firstItem="BcT-S4-Pry" firstAttribute="top" secondItem="UoM-BS-DXR" secondAttribute="top" constant="252" id="SEM-Wm-e17"/>
+                            <constraint firstItem="jaa-Ll-g1f" firstAttribute="top" secondItem="UoM-BS-DXR" secondAttribute="top" constant="180" id="2oz-P1-7hw"/>
                             <constraint firstItem="jaa-Ll-g1f" firstAttribute="centerX" secondItem="BcT-S4-Pry" secondAttribute="centerX" type="default" id="UJg-1n-s6y"/>
-                            <constraint firstItem="BcT-S4-Pry" firstAttribute="centerX" secondItem="UoM-BS-DXR" secondAttribute="centerX" type="default" id="lpO-mS-yJt"/>
+                            <constraint firstItem="jaa-Ll-g1f" firstAttribute="centerX" secondItem="UoM-BS-DXR" secondAttribute="centerX" type="default" id="eWg-ab-Ypo"/>
+                            <constraint firstAttribute="bottom" secondItem="BcT-S4-Pry" secondAttribute="bottom" constant="211" id="xRa-ya-EkH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -557,7 +557,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ss8-WC-mwO"/>
+                    <navigationItem key="navigationItem" id="ss8-WC-mwO">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="jDL-OP-xIT">
+                            <connections>
+                                <action selector="tappedDone:" destination="hbY-tn-dHg" id="1tR-2D-REa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1je-QM-v6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -608,7 +614,7 @@
         <image name="btn_realityCheck_btn_soothingSoungFlie_x2.png" width="182" height="182"/>
         <image name="btn_realityCheck_btn_tripTracker_x2.png" width="182" height="182"/>
         <image name="realityCheck_loginPage_linkedInLogo.png" width="282" height="62"/>
-        <image name="realityCheck_loginPage_logo.png" width="577" height="142"/>
+        <image name="realityCheck_loginPage_logo.png" width="512" height="177"/>
     </resources>
     <classes>
         <class className="ChoseRealityViewController" superclassName="UIViewController">
@@ -646,6 +652,9 @@
         </class>
         <class className="MusicViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MusicViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tappedDone:"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

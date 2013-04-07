@@ -65,7 +65,8 @@
                   @"Maybe you should have a snack. It couldn’t hurt. It might even have tasty results!",
                   @"Still tripping? Hmmm. You probably shouldn’t be. But don’t be TOO concerned.",
                   @"Why would you bother to trip out this hard, if you’re just going to spend the entire time worrying.",
-                  @"You’re not STILL tripping, are you?"] mutableCopy];
+                  @"You’re not STILL tripping, are you?",
+                  @"Still tripping? Better get back to Reality Check (TM)"] mutableCopy];
 }
 
 
