@@ -23,6 +23,7 @@
     return self;
 }
 
+//#define PUPPY_URL @"http://tapestri.es/f/QR1zCG8kj/"
 #define PUPPY_URL @"http://tapestri.es/f/QR1zCG8kj/"
 
 

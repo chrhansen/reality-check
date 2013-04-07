@@ -90,7 +90,11 @@ typedef enum {
 
 - (void)playMusic
 {
-    [self.rdio.player playSource:@"t2626158"];  // try Enya: http://rd.io/x/QQ9HNzdNn0g/
+    if (self.state == RealityStateNormal) {
+        [self.rdio.player playSource:@"t2626158"];  // Normal "Back to Life"
+    } else {
+        [self.rdio.player playSource:@"t24756929"];  // Hell Mode Dub Step
+    }
 }
 
 
@@ -113,19 +117,18 @@ typedef enum {
 
 - (IBAction)toggleHellModeTapped:(id)sender
 {
+    [self stopMusic];
     if (self.state == RealityStateNormal) {
         self.state = RealityStateHellMode;
         [self loadAlerts];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(sendAlert:) userInfo:nil repeats:YES];
-        [self stopMusic];
 
     } else {
         self.state = RealityStateNormal;
         [self.timer invalidate];
         self.timer = nil;
-        [self startMusicIfNotPlaying];
     }
-    
+    [self startMusicIfNotPlaying];
     [self updateButtonPhotos];
     [self updateBrokenGlass];
 }
@@ -174,7 +177,6 @@ typedef enum {
 
 - (void)sendAlert:(NSTimer *)timer
 {
-    NSLog(@"Alerts: %@", self.alerts);
     if (self.alerts.lastObject) {
         NSString *text = self.alerts[0];
         [self.alerts removeObjectAtIndex:0];
