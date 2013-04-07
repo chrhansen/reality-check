@@ -59,7 +59,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"show reality options"]) {
-        ChoseRealityViewController *choseRealityViewController = segue.destinationViewController;
+        UINavigationController *navigationController = segue.destinationViewController;
+        ChoseRealityViewController *choseRealityViewController = (ChoseRealityViewController *)navigationController.topViewController;
         choseRealityViewController.delegate = self;
     }
 }
