@@ -9,6 +9,11 @@
 #import "ChoseRealityViewController.h"
 #import <Rdio/Rdio.h>
 
+typedef enum {
+    RealityStateNormal, 
+    RealityStateHellMode 
+} RealityState;
+
 
 //Rd.io keys
 //Application: Reality Check
@@ -18,6 +23,8 @@
 @interface ChoseRealityViewController ()
 
 @property (nonatomic, strong) Rdio *rdio;
+@property (nonatomic) RealityState state;
+@property (nonatomic, strong) UIImageView *brokenGlassImageView;
 
 @end
 
@@ -38,6 +45,7 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"realityCheck_backgroundGradient"]];
     UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
     self.navigationItem.titleView = titleView;
+    self.state = RealityStateNormal;
 	// Do any additional setup after loading the view.
 }
 
@@ -101,6 +109,56 @@
 
 // HELL MODE
 
-- (IBAction)toggleHellModeTapped:(id)sender {
+- (IBAction)toggleHellModeTapped:(id)sender
+{
+    if (self.state == RealityStateNormal) {
+        self.state = RealityStateHellMode;
+    } else {
+        self.state = RealityStateNormal;
+    }
+    
+    [self updateButtonPhotos];
+    [self updateBrokenGlass];
 }
+
+
+- (void)updateButtonPhotos
+{
+    switch (self.state) {
+        case RealityStateNormal:
+            [self.linkedInButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_confirmYourIdentity_x2.png"] forState:UIControlStateNormal];
+            [self.tripTrackerButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_tripTracker_x2.png"] forState:UIControlStateNormal];
+            [self.textMessageButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_reassuringTextMessages_x2.png"] forState:UIControlStateNormal];
+            [self.playWithPuppiesButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_playWithPuppies_x2.png"] forState:UIControlStateNormal];
+            break;
+        case RealityStateHellMode:
+            [self.linkedInButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_confirmYourIdentity_broken.png"] forState:UIControlStateNormal];
+            [self.tripTrackerButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_tripTracker_broken@2x.png"] forState:UIControlStateNormal];
+            [self.textMessageButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_reassuringTextMessages_broken@2x.png"] forState:UIControlStateNormal];
+            [self.playWithPuppiesButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_playWithPuppies_broken@2x.png"] forState:UIControlStateNormal];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+- (void)updateBrokenGlass
+{
+    switch (self.state) {
+        case RealityStateNormal:
+            [self.brokenGlassImageView removeFromSuperview];
+            break;
+        case RealityStateHellMode:
+        {
+            self.brokenGlassImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_crackedOverlay.png"]];
+            [self.view.window addSubview:self.brokenGlassImageView];
+        }
+            break;
+            
+        default:
+            break;
+    }}
+
 @end
