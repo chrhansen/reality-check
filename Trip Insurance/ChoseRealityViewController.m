@@ -25,6 +25,8 @@ typedef enum {
 @property (nonatomic, strong) Rdio *rdio;
 @property (nonatomic) RealityState state;
 @property (nonatomic, strong) UIImageView *brokenGlassImageView;
+@property (nonatomic, strong) NSMutableArray *alerts;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -107,14 +109,19 @@ typedef enum {
 }
 
 
-// HELL MODE
+// HELL MODE ---------------------------------------------------------------------
 
 - (IBAction)toggleHellModeTapped:(id)sender
 {
     if (self.state == RealityStateNormal) {
         self.state = RealityStateHellMode;
+        [self loadAlerts];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(sendAlert:) userInfo:nil repeats:YES];
+
     } else {
         self.state = RealityStateNormal;
+        [self.timer invalidate];
+        self.timer = nil;
     }
     
     [self updateButtonPhotos];
@@ -159,6 +166,38 @@ typedef enum {
             
         default:
             break;
-    }}
+    }
+}
+
+
+- (void)sendAlert:(NSTimer *)timer
+{
+    NSLog(@"Alerts: %@", self.alerts);
+    if (self.alerts.lastObject) {
+        NSString *text = self.alerts[0];
+        [self.alerts removeObjectAtIndex:0];
+        [self showAlertWithText:text andTitle:@"Reality Check (TM)"];
+    } else {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+
+
+- (void)loadAlerts
+{
+    self.alerts = [@[@"Um. Fuck.",
+                   @"What did you do?",
+                   @"This isn’t supposed to happen!!!",
+                   @"YOU. RUINED. EVERYTHING.",
+                   @"BACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITYBACK2REALITY"]
+                   mutableCopy];
+}
+
+- (void)showAlertWithText:(NSString *)text andTitle:(NSString *)title
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:text delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
 
 @end
