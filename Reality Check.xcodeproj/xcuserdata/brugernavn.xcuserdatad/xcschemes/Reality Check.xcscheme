@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E5375FAD1710C122008F378B"
-               BuildableName = "Trip Insurance.app"
+               BuildableName = "Reality Check.app"
                BlueprintName = "Reality Check"
                ReferencedContainer = "container:Reality Check.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5375FAD1710C122008F378B"
-            BuildableName = "Trip Insurance.app"
+            BuildableName = "Reality Check.app"
             BlueprintName = "Reality Check"
             ReferencedContainer = "container:Reality Check.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5375FAD1710C122008F378B"
-            BuildableName = "Trip Insurance.app"
+            BuildableName = "Reality Check.app"
             BlueprintName = "Reality Check"
             ReferencedContainer = "container:Reality Check.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5375FAD1710C122008F378B"
-            BuildableName = "Trip Insurance.app"
+            BuildableName = "Reality Check.app"
             BlueprintName = "Reality Check"
             ReferencedContainer = "container:Reality Check.xcodeproj">
          </BuildableReference>

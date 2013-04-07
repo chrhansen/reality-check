@@ -19,7 +19,7 @@ typedef void (^AuthenticationHandler)(BOOL granted, NSError *error);
 - (NSString *)username;
 
 - (void)fetchUserInfoCurrrentUserSuccess:(void (^)(id JSON))success failure:(void (^)(NSError *error, id JSON))failure;
-- (void)fetchFullInfoCurrrentUserSuccess:(void (^)(id JSON))success failure:(void (^)(NSError *error, id JSON))failure;
+- (void)fetchHighResPhotoForCurrentUserSuccess:(void (^)(id JSON))success failure:(void (^)(NSError *error, id JSON))failure;
 + (RCLinkedInHelper *)sharedHelper;
 
 @property (nonatomic, strong) RCLinkedInHelper *sharedHelper;

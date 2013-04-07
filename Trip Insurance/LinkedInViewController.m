@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     [self loadProfile];
+    [self loadHighResPhoto];
 	// Do any additional setup after loading the view.
 }
 
@@ -48,11 +49,27 @@
 }
 
 
+- (void)loadHighResPhoto
+{
+    [[RCLinkedInHelper sharedHelper] fetchHighResPhotoForCurrentUserSuccess:^(id JSON) {
+        NSString *highResPath = [JSON[@"values"] lastObject];
+        if (highResPath) [self.profileImageView setImageWithURL:[NSURL URLWithString:highResPath]];
+        
+        //[self updateUIWithDictionary:JSON];
+    } failure:^(NSError *error, id JSON) {
+        NSLog(@"error: %@", error.localizedDescription);
+    }];
+}
+
+
+
+
 - (void)updateUIWithDictionary:(NSDictionary *)dictionary
 {
     // Image
-//    NSLog(@"dictionary: %@", dictionary);
-    [self.profileImageView setImageWithURL:[NSURL URLWithString:dictionary[@"pictureUrl"]]];
+    if (self.profileImageView.image == nil) {
+//        [self.profileImageView setImageWithURL:[NSURL URLWithString:dictionary[@"pictureUrl"]]];
+    }
     
     // Name
     NSString *nameString = @"";
@@ -78,7 +95,6 @@
 
     // Skills
     self.skillCountLabel.text = [NSString stringWithFormat:@"%d", [dictionary[@"skills"][@"values"] count]];
-    
 }
 
 

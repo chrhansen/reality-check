@@ -151,9 +151,8 @@
 }
 
 
-- (void)fetchUserInfoCurrrentUserSuccess:(void (^)(id JSON))success
-                                 failure:(void (^)(NSError *error, id JSON))failure
-{
+- (void)fetchUserInfoCurrrentUserSuccess:(void (^)(id JSON))success failure:(void (^)(NSError *error, id JSON))failure
+{   
     NSString *path = @"people/~:(id,first-name,last-name,public-profile-url,picture-url,three-current-positions,recommendations-received,skills)";
     NSDictionary *parameters = @{@"format" : @"json"};
     [self getPath:path parameters:parameters completion:^(NSError *error, id JSON) {
@@ -165,10 +164,9 @@
     }];
 }
 
-- (void)fetchFullInfoCurrrentUserSuccess:(void (^)(id JSON))success
-                                 failure:(void (^)(NSError *error, id JSON))failure
+- (void)fetchHighResPhotoForCurrentUserSuccess:(void (^)(id JSON))success failure:(void (^)(NSError *error, id JSON))failure
 {
-    NSString *path = @"jobs/~:(id)";
+    NSString *path = @"people/~/picture-urls::(original)";
     NSDictionary *parameters = @{@"format" : @"json"};
     [self getPath:path parameters:parameters completion:^(NSError *error, id JSON) {
         if (!error) {
@@ -178,6 +176,7 @@
         }
     }];
 }
+
 
 
 - (id)currentAccount
