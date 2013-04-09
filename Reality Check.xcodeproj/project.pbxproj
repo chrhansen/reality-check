@@ -59,6 +59,8 @@
 		E53760251710E355008F378B /* RCLinkedInHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E53760241710E354008F378B /* RCLinkedInHelper.m */; };
 		E53760271710E73F008F378B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53760261710E73F008F378B /* MobileCoreServices.framework */; };
 		E53760291710E76A008F378B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53760281710E76A008F378B /* SystemConfiguration.framework */; };
+		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
+		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
 		E5A20C7F1710FE1700DB912F /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C7E1710FE1700DB912F /* TextViewController.m */; };
 		E5A20C831710FEB400DB912F /* RCTwilioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C821710FEB400DB912F /* RCTwilioHelper.m */; };
@@ -147,6 +149,7 @@
 		E53760241710E354008F378B /* RCLinkedInHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLinkedInHelper.m; sourceTree = "<group>"; };
 		E53760261710E73F008F378B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E53760281710E76A008F378B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
 		E5A20C7D1710FE1700DB912F /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 		E5B94B181711FC1300AD960F /* TripTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTrackerViewController.m; sourceTree = "<group>"; };
 		E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerBlank.png; sourceTree = "<group>"; };
 		E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerComplete.png; sourceTree = "<group>"; };
+		E5D4EC8B1713EE05004F91FD /* RealityAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealityAPIKeys.h; sourceTree = "<group>"; };
+		E5D4EC8C1714124E004F91FD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +222,8 @@
 		E5375FA51710C121008F378B = {
 			isa = PBXGroup;
 			children = (
+				E55A8C9C1714146F00AFAE1D /* icon@2x.png */,
+				E5D4EC8C1714124E004F91FD /* icon.png */,
 				E5375FC91710C122008F378B /* MainStoryboard.storyboard */,
 				E5375FB71710C122008F378B /* Trip Insurance */,
 				E5375FB01710C122008F378B /* Frameworks */,
@@ -251,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				E5375FFA1710D0D8008F378B /* Vendor */,
+				E5D4EC8B1713EE05004F91FD /* RealityAPIKeys.h */,
 				E5375FD41710C1AA008F378B /* LoginViewController.h */,
 				E5375FD51710C1AA008F378B /* LoginViewController.m */,
 				E5375FED1710C889008F378B /* LoginWebViewController.h */,
@@ -469,6 +477,8 @@
 				E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */,
 				E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */,
 				E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */,
+				E55A8C9B1714146C00AFAE1D /* icon.png in Resources */,
+				E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +569,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -575,7 +586,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Christian Hansen";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Christian Hansen";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -583,6 +595,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "D8F0DAB4-0C08-42BB-80E8-E414E8235F69";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8F0DAB4-0C08-42BB-80E8-E414E8235F69";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

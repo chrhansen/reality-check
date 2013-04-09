@@ -8,12 +8,12 @@
 
 #import "MusicViewController.h"
 #import <Rdio/Rdio.h>
-
+#import "RealityAPIKeys.h"
+#import <QuartzCore/QuartzCore.h>
 
 //Rd.io keys
-//Application: Reality Check
-#define RDIO_KEY    @"59pkuyudg3jrdmrqyc6r2rs8"
-#define RDIO_SECRET @"ur5FT9z9xQ"
+//#define RDIO_KEY    @"" API keys are imported from "RealityAPIKeys.h"
+//#define RDIO_SECRET @""
 
 @interface MusicViewController () <RdioDelegate>
 
@@ -37,6 +37,8 @@
     [super viewDidLoad];
     UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
     self.navigationItem.titleView = titleView;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"realityCheck_backgroundGradient"]];
+    [self addTextShadowToLabel];
 	// Do any additional setup after loading the view.
 }
 
@@ -59,12 +61,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)addTextShadowToLabel
+{
+    self.backgroundLabel.layer.shadowOpacity = 0.5;
+    self.backgroundLabel.layer.shadowRadius = 3.0;
+    self.backgroundLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.backgroundLabel.layer.shadowOffset = CGSizeMake(0.0, 0.0);
+    self.backgroundLabel.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    self.backgroundLabel.layer.shouldRasterize = YES;
+}
+
 - (void)playMusic
 {
     if (!self.rdio) {
         self.rdio = [[Rdio alloc] initWithConsumerKey:RDIO_KEY andSecret:RDIO_SECRET delegate:self];
     }
-    [self.rdio.player playSource:@"t2626158"];  // try Enya: http://rd.io/x/QQ9HNzdNn0g/
+    [self.rdio.player playAndRestart:YES];
+    [self.rdio.player playSource:@"t1232137"];  // try Enya: http://rd.io/x/QQ9HNzdNn0g/
 }
 
 

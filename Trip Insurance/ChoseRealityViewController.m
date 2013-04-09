@@ -59,10 +59,25 @@ typedef enum {
 }
 
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    if([UIScreen mainScreen].bounds.size.height == 568.0) {
+        [self adjustPositionsFor4InchPhone];
+    }
+}
 
 - (void)dealloc
 {
     [self stopMusic];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"show soothing sounds"]) {
+        [self stopMusic];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,6 +86,26 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)adjustPositionsFor4InchPhone
+{
+    // Adjust button positions
+    self.linkedInButton.center = CGPointMake(94, 70);
+    self.tripTrackerButton.center = CGPointMake(227, 70);
+    self.textMessageButton.center = CGPointMake(94, 210);
+    self.playWithPuppiesButton.center = CGPointMake(227, 210);
+    self.hellModeButton.center = CGPointMake(94, 350);
+    self.soothingSoundsButton.center = CGPointMake(227, 350);
+    
+    CGFloat labelOffset = 60.0f;
+    // Adjust label positions
+    self.linkedInLabel.center = CGPointMake(94, 70+labelOffset);
+    self.tripTrackerLabel.center = CGPointMake(227, 70+labelOffset);
+    self.textLabel.center = CGPointMake(94, 210+labelOffset);
+    self.puppiesLabel.center = CGPointMake(227, 210+labelOffset);
+    self.hellModeLabel.center = CGPointMake(94, 350+labelOffset);
+    self.soothingLabel.center = CGPointMake(227, 350+labelOffset);
+}
 
 
 - (IBAction)logoutOfRealityTapped:(id)sender
@@ -112,6 +147,15 @@ typedef enum {
     return _rdio;
 }
 
+- (IBAction)upgradeToPremiumTapped:(id)sender
+{
+    UIAlertView *alertView = [UIAlertView.alloc initWithTitle:NSLocalizedString(@"Premium Reality $99", nil)
+                                                      message:NSLocalizedString(@"Click \"Buy\" to upgrade Reality Check\u2122 to Premium Reality for just $99/year.", nil)
+                                                     delegate:nil
+                                            cancelButtonTitle:NSLocalizedString(@"Buy", nil)
+                                            otherButtonTitles:NSLocalizedString(@"Cancel", nil), nil];
+    [alertView show];
+}
 
 // HELL MODE ---------------------------------------------------------------------
 
@@ -180,7 +224,7 @@ typedef enum {
     if (self.alerts.lastObject) {
         NSString *text = self.alerts[0];
         [self.alerts removeObjectAtIndex:0];
-        [self showAlertWithText:text andTitle:@"Reality Check (TM)"];
+        [self showAlertWithText:text andTitle:@"Reality Check\u2122"];
     } else {
         [self.timer invalidate];
         self.timer = nil;

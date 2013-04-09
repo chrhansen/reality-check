@@ -8,6 +8,7 @@
 
 #import "LinkedInViewController.h"
 #import "RCLinkedInHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LinkedInViewController ()
 
@@ -29,9 +30,10 @@
     [super viewDidLoad];
     [self loadProfile];
     [self loadHighResPhoto];
-    UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
-    self.navigationItem.titleView = titleView;
-
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"realityCheck_backgroundGradient"]];
+    [self addImageViewStyling];
+    [self addTextViewBorder];
 	// Do any additional setup after loading the view.
 }
 
@@ -42,11 +44,29 @@
 //    [self testAnimation];
 }
 
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    if([UIScreen mainScreen].bounds.size.height == 568.0f) {
+        [self adjustPositionsFor4InchPhone];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)adjustPositionsFor4InchPhone
+{
+    self.jobPositionLabel.center = CGPointMake(160.0f, 232.0f);
+    self.jobCompanyLabel.center = CGPointMake(160.0f, 254.0f);
+    self.recommendationTextView.bounds = CGRectMake(0, 0, self.recommendationTextView.bounds.size.width, 180);
+    self.recommendationTextView.center = CGPointMake(160.f, 370.0f);
+}
+
 
 
 - (void)loadProfile
@@ -72,6 +92,29 @@
 }
 
 
+- (void)addImageViewStyling
+{
+    self.imageViewBackgroundView.layer.shadowRadius = 2.0f;
+    self.imageViewBackgroundView.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    self.imageViewBackgroundView.layer.shadowOpacity = 0.5f;
+    
+    self.profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.profileImageView.layer.borderWidth = 1.0f;
+    self.profileImageView.layer.shadowRadius = 1.0f;
+    self.profileImageView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    self.profileImageView.layer.shadowOpacity = 0.8f;
+}
+
+
+- (void)addTextViewBorder
+{
+    self.recommendationTextView.layer.borderWidth = 1.0f;
+    self.recommendationTextView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    
+    self.recommendationTextView.layer.shadowRadius = 4.0f;
+    self.recommendationTextView.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    self.recommendationTextView.layer.shadowOpacity = 0.5f;
+}
 
 - (void)updateUIWithDictionary:(NSDictionary *)dictionary
 {
@@ -103,7 +146,11 @@
     }
 
     // Skills
-    self.skillCountLabel.text = [NSString stringWithFormat:@"%d", [dictionary[@"skills"][@"values"] count]];
+    NSString *skillsCountText = [NSString stringWithFormat:@"%d", [dictionary[@"skills"][@"values"] count]];
+    if (skillsCountText == nil || skillsCountText.length == 0) {
+        skillsCountText = @"0";
+    }
+    self.skillCountLabel.text = skillsCountText;
 }
 
 

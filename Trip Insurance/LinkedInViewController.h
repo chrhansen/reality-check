@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *recommendationTextView;
 @property (weak, nonatomic) IBOutlet UILabel *recommendationNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *skillCountLabel;
+@property (weak, nonatomic) IBOutlet UIView *imageViewBackgroundView;
 
 #pragma mark Animation
 @property (weak, nonatomic) IBOutlet UILabel *animatedLabel;

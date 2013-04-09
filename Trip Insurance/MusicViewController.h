@@ -11,5 +11,6 @@
 @interface MusicViewController : UIViewController
 
 - (IBAction)tappedDone:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *backgroundLabel;
 
 @end

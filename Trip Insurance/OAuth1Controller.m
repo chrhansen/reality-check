@@ -10,6 +10,7 @@
 #import "NSString+URLEncoding.h"
 #include "hmac.h"
 #include "Base64Transcoder.h"
+#import "RealityAPIKeys.h"
 
 typedef void (^WebWiewDelegateHandler)(NSDictionary *oauthParams);
 
@@ -28,8 +29,8 @@ typedef void (^WebWiewDelegateHandler)(NSDictionary *oauthParams);
 // Go to: https://www.linkedin.com/secure/developer and get your API keys
 
 #define OAUTH_CALLBACK       @"linkedin_oauth" //Sometimes this has to be the same as the registered app callback url
-#define CONSUMER_KEY         @"4nmz48hs6mlp"
-#define CONSUMER_SECRET      @"PEkeNjjSQ6jOqvQr"
+//#define CONSUMER_KEY         @"" The API keys are set in "RealityAPIKeys.h"
+//#define CONSUMER_SECRET      @""
 #define AUTH_URL             @"https://api.linkedin.com/uas/"
 #define REQUEST_TOKEN_URL    @"oauth/requestToken"
 #define AUTHENTICATE_URL     @"oauth/authorize"

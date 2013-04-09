@@ -11,5 +11,6 @@
 @interface TextViewController : UIViewController
 
 - (IBAction)doneTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *backgroundLabel;
 
 @end
