@@ -87,6 +87,16 @@
 }
 
 
+- (void)showConclusion
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Reality Check\u2122"
+                                                        message:NSLocalizedString(@"Hopefully you will be fine in a couple of hours.", nil)
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
 - (NSMutableArray *)answers
 {
     if (!_answers) _answers = [@[NSLocalizedString(@"Guess so", nil),
@@ -108,6 +118,7 @@
         [self.timer invalidate];
         self.timer = nil;
         self.answers = nil;
+        [self showConclusion];
     }
 }
 

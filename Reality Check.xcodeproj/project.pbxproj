@@ -15,7 +15,6 @@
 		E51373AF1711780A00F0F279 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51373AE1711780A00F0F279 /* AudioToolbox.framework */; };
 		E51373B11711E83D00F0F279 /* realityCheck_loginPage_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373B01711E83D00F0F279 /* realityCheck_loginPage_logo.png */; };
 		E51373B31711E8DA00F0F279 /* realityCheck_menuBarLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373B21711E8DA00F0F279 /* realityCheck_menuBarLogo@2x.png */; };
-		E51373B71711ED6700F0F279 /* btn_realityCheck_btn_upgrade_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373B61711ED6700F0F279 /* btn_realityCheck_btn_upgrade_@2x.png */; };
 		E51373BD1711F22F00F0F279 /* btn_realityCheck_btn_confirmYourIdentity_broken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373B91711F22F00F0F279 /* btn_realityCheck_btn_confirmYourIdentity_broken@2x.png */; };
 		E51373BE1711F22F00F0F279 /* btn_realityCheck_btn_playWithPuppies_broken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373BA1711F22F00F0F279 /* btn_realityCheck_btn_playWithPuppies_broken@2x.png */; };
 		E51373BF1711F22F00F0F279 /* btn_realityCheck_btn_reassuringTextMessages_broken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51373BB1711F22F00F0F279 /* btn_realityCheck_btn_reassuringTextMessages_broken@2x.png */; };
@@ -59,6 +58,7 @@
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
+		E59E0551174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E0550174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png */; };
 		E5A20C7F1710FE1700DB912F /* ReassuringMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */; };
 		E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */; };
 		E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B94B181711FC1300AD960F /* TripTrackerViewController.m */; };
@@ -79,7 +79,6 @@
 		E51373AE1711780A00F0F279 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E51373B01711E83D00F0F279 /* realityCheck_loginPage_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_loginPage_logo.png; sourceTree = "<group>"; };
 		E51373B21711E8DA00F0F279 /* realityCheck_menuBarLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_menuBarLogo@2x.png"; sourceTree = "<group>"; };
-		E51373B61711ED6700F0F279 /* btn_realityCheck_btn_upgrade_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_realityCheck_btn_upgrade_@2x.png"; sourceTree = "<group>"; };
 		E51373B91711F22F00F0F279 /* btn_realityCheck_btn_confirmYourIdentity_broken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_realityCheck_btn_confirmYourIdentity_broken@2x.png"; sourceTree = "<group>"; };
 		E51373BA1711F22F00F0F279 /* btn_realityCheck_btn_playWithPuppies_broken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_realityCheck_btn_playWithPuppies_broken@2x.png"; sourceTree = "<group>"; };
 		E51373BB1711F22F00F0F279 /* btn_realityCheck_btn_reassuringTextMessages_broken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_realityCheck_btn_reassuringTextMessages_broken@2x.png"; sourceTree = "<group>"; };
@@ -148,6 +147,7 @@
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
+		E59E0550174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png; sourceTree = "<group>"; };
 		E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReassuringMessageViewController.h; sourceTree = "<group>"; };
 		E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReassuringMessageViewController.m; sourceTree = "<group>"; };
 		E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_crackedOverlay@2x.png"; sourceTree = "<group>"; };
@@ -364,10 +364,10 @@
 				E51373C11711F36700F0F279 /* btn_realityCheck_btn_calmingImagery@2x.png */,
 				E51373C21711F36700F0F279 /* btn_realityCheck_btn_confirmYourIdentity_x2.png */,
 				E51373C31711F36800F0F279 /* btn_realityCheck_btn_playWithPuppies_x2.png */,
+				E59E0550174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png */,
 				E51373C41711F36800F0F279 /* btn_realityCheck_btn_reassuringTextMessages_x2.png */,
 				E51373C51711F36800F0F279 /* btn_realityCheck_btn_soothingSoungFlie_x2.png */,
 				E51373C61711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png */,
-				E51373B61711ED6700F0F279 /* btn_realityCheck_btn_upgrade_@2x.png */,
 			);
 			name = "ChoseReality Screen";
 			sourceTree = "<group>";
@@ -473,7 +473,6 @@
 				E513738C171125DE00F0F279 /* realityCheck_loginPage_linkedInLogo.png in Resources */,
 				E51373B11711E83D00F0F279 /* realityCheck_loginPage_logo.png in Resources */,
 				E51373B31711E8DA00F0F279 /* realityCheck_menuBarLogo@2x.png in Resources */,
-				E51373B71711ED6700F0F279 /* btn_realityCheck_btn_upgrade_@2x.png in Resources */,
 				E51373BD1711F22F00F0F279 /* btn_realityCheck_btn_confirmYourIdentity_broken@2x.png in Resources */,
 				E51373BE1711F22F00F0F279 /* btn_realityCheck_btn_playWithPuppies_broken@2x.png in Resources */,
 				E51373BF1711F22F00F0F279 /* btn_realityCheck_btn_reassuringTextMessages_broken@2x.png in Resources */,
@@ -491,6 +490,7 @@
 				E5BCD01E174DAB9100691A09 /* Default-568h@2x.png in Resources */,
 				E5BCD020174DAC0A00691A09 /* Default@2x.png in Resources */,
 				E5BCD022174DAC0E00691A09 /* Default.png in Resources */,
+				E59E0551174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
