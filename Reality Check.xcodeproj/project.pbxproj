@@ -63,10 +63,10 @@
 		E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */; };
 		E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B94B181711FC1300AD960F /* TripTrackerViewController.m */; };
 		E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */; };
-		E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */; };
 		E5BCD01E174DAB9100691A09 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */; };
 		E5BCD020174DAC0A00691A09 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BCD01F174DAC0A00691A09 /* Default@2x.png */; };
 		E5BCD022174DAC0E00691A09 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BCD021174DAC0E00691A09 /* Default.png */; };
+		E5BCD028174DCE4F00691A09 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BCD027174DCE4F00691A09 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,11 +154,12 @@
 		E5B94B171711FC1300AD960F /* TripTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTrackerViewController.h; sourceTree = "<group>"; };
 		E5B94B181711FC1300AD960F /* TripTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTrackerViewController.m; sourceTree = "<group>"; };
 		E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerBlank.png; sourceTree = "<group>"; };
-		E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerComplete.png; sourceTree = "<group>"; };
 		E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		E5BCD01F174DAC0A00691A09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		E5BCD021174DAC0E00691A09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		E5BCD023174DBB1800691A09 /* RealityAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealityAPIKeys.h; path = "Trip Insurance/RealityAPIKeys.h"; sourceTree = "<group>"; };
+		E5BCD026174DCE4F00691A09 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E5BCD027174DCE4F00691A09 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E5D4EC8C1714124E004F91FD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +323,7 @@
 		E5375FFA1710D0D8008F378B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E5BCD025174DCE4100691A09 /* MBProgressHUD */,
 				E51373AA171177C200F0F279 /* Rdio.framework */,
 				E53760001710E038008F378B /* AFNetworking */,
 				E5375FF61710D0D3008F378B /* KeyChainItemWrapper */,
@@ -391,7 +393,6 @@
 			isa = PBXGroup;
 			children = (
 				E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */,
-				E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */,
 			);
 			name = TripTracker;
 			sourceTree = "<group>";
@@ -404,6 +405,15 @@
 				E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */,
 			);
 			name = "Launch Images";
+			sourceTree = "<group>";
+		};
+		E5BCD025174DCE4100691A09 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E5BCD026174DCE4F00691A09 /* MBProgressHUD.h */,
+				E5BCD027174DCE4F00691A09 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +486,6 @@
 				E51373CC1711F36800F0F279 /* btn_realityCheck_btn_tripTracker_x2.png in Resources */,
 				E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */,
 				E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */,
-				E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */,
 				E55A8C9B1714146C00AFAE1D /* icon.png in Resources */,
 				E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */,
 				E5BCD01E174DAB9100691A09 /* Default-568h@2x.png in Resources */,
@@ -518,6 +527,7 @@
 				E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */,
 				E51373A91711775200F0F279 /* MusicViewController.m in Sources */,
 				E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */,
+				E5BCD028174DCE4F00691A09 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

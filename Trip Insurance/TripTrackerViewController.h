@@ -10,9 +10,4 @@
 
 @interface TripTrackerViewController : UIViewController <UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *emptyFormImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *filledFormImageView;
-
-- (IBAction)changeForm:(id)sender;
-
 @end

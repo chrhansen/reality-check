@@ -548,50 +548,155 @@
             <point key="canvasLocation" x="852" y="-841"/>
         </scene>
         <!--Trip Tracker View Controller-->
-        <scene sceneID="fwq-4N-8zO">
+        <scene sceneID="Ylp-ub-jjB">
             <objects>
-                <viewController id="Xfu-WZ-gAG" customClass="TripTrackerViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tWR-fY-Gjj">
+                <viewController id="gpp-Re-qFE" customClass="TripTrackerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBH-OL-sor">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" image="realityCheck_tripTrackerBlank.png" translatesAutoresizingMaskIntoConstraints="NO" id="azp-Ms-E20">
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="realityCheck_tripTrackerComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKJ-UL-WLY"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="realityCheck_backgroundGradient@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-Pu-3CD"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJZ-Gi-p5d">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyd-eW-6e4">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Which drug(s) did you take?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzi-l3-gW8">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-Fq-tUi">
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gpp-Re-qFE" id="MC1-9R-Lsd"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzf-9L-CNh">
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gpp-Re-qFE" id="eQd-Ny-jRZ"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How much?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-PT-Ax5">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="When did you take it?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-mr-Wbl">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OV-p5-KFw">
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gpp-Re-qFE" id="ztm-I4-Zll"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Are you a Burner?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpx-dk-Rg3">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXM-u2-o0H">
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                                <connections>
+                                                    <action selector="submit:" destination="gpp-Re-qFE" eventType="editingDidEnd" id="jIi-5H-NnC"/>
+                                                    <outlet property="delegate" destination="gpp-Re-qFE" id="Ynx-2x-1lu"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHn-GD-Lnz">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submit:" destination="gpp-Re-qFE" eventType="touchUpInside" id="tAv-eh-d2Y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pXM-u2-o0H" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1Vo-ou-YAZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6OV-p5-KFw" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="41N-CQ-kVS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lzi-l3-gW8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6yf-D0-HYQ"/>
+                                            <constraint firstItem="Bqm-Fq-tUi" firstAttribute="top" secondItem="Lzi-l3-gW8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8E1-xM-CLE"/>
+                                            <constraint firstItem="nbg-mr-Wbl" firstAttribute="top" secondItem="Gzf-9L-CNh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8YY-07-tmR"/>
+                                            <constraint firstItem="pXM-u2-o0H" firstAttribute="top" secondItem="jpx-dk-Rg3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hcx-c9-LoE"/>
+                                            <constraint firstAttribute="trailing" secondItem="1dj-PT-Ax5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IKe-kr-bw5"/>
+                                            <constraint firstItem="nbg-mr-Wbl" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SEz-Be-8ES"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gzf-9L-CNh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cx4-Hq-Ehu"/>
+                                            <constraint firstItem="Bqm-Fq-tUi" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dVT-v0-KAY"/>
+                                            <constraint firstItem="pXM-u2-o0H" firstAttribute="baseline" secondItem="Gzf-9L-CNh" secondAttribute="baseline" type="default" id="dfn-Ty-IDa"/>
+                                            <constraint firstAttribute="trailing" secondItem="nbg-mr-Wbl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="djV-Da-XOM"/>
+                                            <constraint firstItem="6OV-p5-KFw" firstAttribute="top" secondItem="nbg-mr-Wbl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eJa-5w-4Lg"/>
+                                            <constraint firstItem="6OV-p5-KFw" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hb2-QS-OgT"/>
+                                            <constraint firstItem="hHn-GD-Lnz" firstAttribute="top" secondItem="pXM-u2-o0H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iz4-Rr-kR0"/>
+                                            <constraint firstItem="pXM-u2-o0H" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jwF-wr-R3D"/>
+                                            <constraint firstItem="Lzi-l3-gW8" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="k8c-uj-Dnf"/>
+                                            <constraint firstItem="jpx-dk-Rg3" firstAttribute="top" secondItem="6OV-p5-KFw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kk8-RI-0Mb"/>
+                                            <constraint firstItem="Gzf-9L-CNh" firstAttribute="top" secondItem="1dj-PT-Ax5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kkj-b4-tCM"/>
+                                            <constraint firstItem="hHn-GD-Lnz" firstAttribute="centerX" secondItem="pXM-u2-o0H" secondAttribute="centerX" type="default" id="l8Y-jg-3oN"/>
+                                            <constraint firstItem="1dj-PT-Ax5" firstAttribute="top" secondItem="Bqm-Fq-tUi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pUk-KK-HGs"/>
+                                            <constraint firstItem="1dj-PT-Ax5" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rIb-rD-hCN"/>
+                                            <constraint firstItem="Gzf-9L-CNh" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tLq-eY-ZcG"/>
+                                            <constraint firstItem="jpx-dk-Rg3" firstAttribute="leading" secondItem="Gyd-eW-6e4" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tUR-Ii-ScE"/>
+                                            <constraint firstItem="Gzf-9L-CNh" firstAttribute="baseline" secondItem="Bqm-Fq-tUi" secondAttribute="baseline" type="default" id="ul9-Jr-fEw"/>
+                                            <constraint firstItem="Lzi-l3-gW8" firstAttribute="top" secondItem="Gyd-eW-6e4" secondAttribute="top" constant="20" symbolic="YES" type="default" id="uon-DR-nwM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bqm-Fq-tUi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xjL-np-14i"/>
+                                            <constraint firstAttribute="trailing" secondItem="jpx-dk-Rg3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="yaz-jf-xOe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gyd-eW-6e4" firstAttribute="leading" secondItem="cJZ-Gi-p5d" secondAttribute="leading" type="default" id="1Q1-WX-1VN"/>
+                                    <constraint firstItem="Gyd-eW-6e4" firstAttribute="top" secondItem="cJZ-Gi-p5d" secondAttribute="top" type="default" id="I0C-dJ-Ndr"/>
+                                    <constraint firstItem="Gyd-eW-6e4" firstAttribute="bottom" secondItem="cJZ-Gi-p5d" secondAttribute="bottom" type="default" id="Zg0-BF-Bmk"/>
+                                    <constraint firstItem="Gyd-eW-6e4" firstAttribute="trailing" secondItem="cJZ-Gi-p5d" secondAttribute="trailing" type="default" id="hEO-9E-rh5"/>
+                                    <constraint firstItem="Gyd-eW-6e4" firstAttribute="centerX" secondItem="cJZ-Gi-p5d" secondAttribute="centerX" type="default" id="tId-vU-iUb"/>
+                                    <constraint firstItem="Gyd-eW-6e4" firstAttribute="centerY" secondItem="cJZ-Gi-p5d" secondAttribute="centerY" type="default" id="vuU-nb-Rdl"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sKJ-UL-WLY" firstAttribute="bottom" secondItem="tWR-fY-Gjj" secondAttribute="bottom" type="default" id="1Xy-RI-Id1"/>
-                            <constraint firstItem="azp-Ms-E20" firstAttribute="top" secondItem="tWR-fY-Gjj" secondAttribute="top" type="default" id="9hA-bI-bII"/>
-                            <constraint firstItem="sKJ-UL-WLY" firstAttribute="top" secondItem="tWR-fY-Gjj" secondAttribute="top" type="default" id="PuB-Nz-xpt"/>
-                            <constraint firstItem="azp-Ms-E20" firstAttribute="trailing" secondItem="tWR-fY-Gjj" secondAttribute="trailing" type="default" id="Unh-mB-hrh"/>
-                            <constraint firstItem="sKJ-UL-WLY" firstAttribute="trailing" secondItem="tWR-fY-Gjj" secondAttribute="trailing" type="default" id="gtJ-jD-kTA"/>
-                            <constraint firstItem="azp-Ms-E20" firstAttribute="bottom" secondItem="tWR-fY-Gjj" secondAttribute="bottom" type="default" id="pL3-gS-Fei"/>
-                            <constraint firstItem="azp-Ms-E20" firstAttribute="leading" secondItem="tWR-fY-Gjj" secondAttribute="leading" type="default" id="vvC-rq-pBp"/>
-                            <constraint firstItem="sKJ-UL-WLY" firstAttribute="leading" secondItem="tWR-fY-Gjj" secondAttribute="leading" type="default" id="zan-Z8-ZlH"/>
+                            <constraint firstItem="hrY-Pu-3CD" firstAttribute="leading" secondItem="oBH-OL-sor" secondAttribute="leading" type="default" id="QFM-f8-0pi"/>
+                            <constraint firstItem="cJZ-Gi-p5d" firstAttribute="leading" secondItem="oBH-OL-sor" secondAttribute="leading" type="default" id="Slv-q9-sQM"/>
+                            <constraint firstItem="cJZ-Gi-p5d" firstAttribute="top" secondItem="oBH-OL-sor" secondAttribute="top" type="default" id="UvZ-aG-WBz"/>
+                            <constraint firstItem="hrY-Pu-3CD" firstAttribute="trailing" secondItem="oBH-OL-sor" secondAttribute="trailing" type="default" id="XVK-77-9Vo"/>
+                            <constraint firstItem="cJZ-Gi-p5d" firstAttribute="trailing" secondItem="oBH-OL-sor" secondAttribute="trailing" type="default" id="f0z-q3-r4I"/>
+                            <constraint firstItem="hrY-Pu-3CD" firstAttribute="bottom" secondItem="oBH-OL-sor" secondAttribute="bottom" type="default" id="nh2-cx-4KE"/>
+                            <constraint firstItem="cJZ-Gi-p5d" firstAttribute="bottom" secondItem="oBH-OL-sor" secondAttribute="bottom" type="default" id="p7K-0H-8wO"/>
+                            <constraint firstItem="hrY-Pu-3CD" firstAttribute="top" secondItem="oBH-OL-sor" secondAttribute="top" type="default" id="qFp-nq-R1N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="D62-Es-KSO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="lnO-Wv-f6h">
+                    <navigationItem key="navigationItem" id="UcH-bp-X1D">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="laE-Qs-DXe">
                             <connections>
-                                <action selector="changeForm:" destination="Xfu-WZ-gAG" id="JfU-Yg-b4g"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="pq5-bE-2bY">
-                            <connections>
-                                <action selector="doneTapped:" destination="Xfu-WZ-gAG" id="cyw-ge-z24"/>
+                                <action selector="doneTapped:" destination="gpp-Re-qFE" id="OZG-93-Xa6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="emptyFormImageView" destination="azp-Ms-E20" id="UJ3-nL-hGh"/>
-                        <outlet property="filledFormImageView" destination="sKJ-UL-WLY" id="brf-vu-Rdj"/>
+                        <outlet property="scrollView" destination="cJZ-Gi-p5d" id="6sE-Z3-czj"/>
+                        <outletCollection property="textFields" destination="Bqm-Fq-tUi" id="CDn-4w-AML"/>
+                        <outletCollection property="textFields" destination="6OV-p5-KFw" id="61K-I1-4T9"/>
+                        <outletCollection property="textFields" destination="pXM-u2-o0H" id="ZkC-Gt-C0E"/>
+                        <outletCollection property="textFields" destination="Gzf-9L-CNh" id="ip0-v0-gwj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d0z-rK-B5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvc-ax-xFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377" y="-841"/>
+            <point key="canvasLocation" x="2408" y="-841"/>
         </scene>
         <!--Puppies View Controller-->
         <scene sceneID="VA1-7d-GOc">
@@ -762,7 +867,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Xfu-WZ-gAG" kind="relationship" relationship="rootViewController" id="ICO-ER-MHN"/>
+                        <segue destination="gpp-Re-qFE" kind="relationship" relationship="rootViewController" id="cJF-a4-VQ3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzs-wY-pBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -778,11 +883,94 @@
         <image name="btn_realityCheck_btn_soothingSoungFlie_x2.png" width="230" height="230"/>
         <image name="btn_realityCheck_btn_tripTracker_x2.png" width="230" height="230"/>
         <image name="btn_realityCheck_btn_upgrade_@2x.png" width="278" height="45"/>
+        <image name="realityCheck_backgroundGradient@2x.png" width="639" height="1136"/>
         <image name="realityCheck_loginPage_linkedInLogo.png" width="282" height="62"/>
         <image name="realityCheck_loginPage_logo.png" width="512" height="177"/>
-        <image name="realityCheck_tripTrackerBlank.png" width="640" height="1008"/>
-        <image name="realityCheck_tripTrackerComplete.png" width="640" height="1008"/>
     </resources>
+    <classes>
+        <class className="ChoseRealityViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChoseRealityViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutOfRealityTapped:"/>
+                <relationship kind="action" name="toggleHellModeTapped:"/>
+                <relationship kind="action" name="upgradeToPremiumTapped:"/>
+                <relationship kind="outlet" name="hellModeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="hellModeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="linkedInButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="linkedInLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playWithPuppiesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="puppiesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="soothingLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="soothingSoundsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textMessageButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tripTrackerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tripTrackerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LinkedInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedInViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneTapped:"/>
+                <relationship kind="outlet" name="animatedLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageViewBackgroundView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="jobCompanyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="jobPositionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="recommendationNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recommendationTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="skillCountLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginTapped:"/>
+            </relationships>
+        </class>
+        <class className="LoginWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelTapped:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MusicViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MusicViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tappedDone:"/>
+                <relationship kind="outlet" name="backgroundLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PuppiesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PuppiesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneTapped:"/>
+                <relationship kind="action" name="handleLongPress:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="ReassuringMessageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReassuringMessageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneTapped:"/>
+                <relationship kind="outlet" name="backgroundLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TripTrackerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TripTrackerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneTapped:"/>
+                <relationship kind="action" name="submit:"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outletCollection" name="textFields" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

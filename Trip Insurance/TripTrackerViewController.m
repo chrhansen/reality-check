@@ -7,21 +7,20 @@
 //
 
 #import "TripTrackerViewController.h"
+#import "MBProgressHUD.h"
 
-@interface TripTrackerViewController ()
+@interface TripTrackerViewController () <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFields;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) MBProgressHUD *progressHUD;
+@property (nonatomic, strong) NSMutableArray *spinnerSteps;
+@property (nonatomic, strong) NSMutableArray *answers;
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation TripTrackerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -31,28 +30,115 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    [self.scrollView setContentSize:CGSizeMake(self.view.bounds.size.width, 800.0f)];
 }
 
+
+- (void)dealloc
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
 
 - (IBAction)doneTapped:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-- (IBAction)changeForm:(id)sender
+- (IBAction)submit:(id)sender
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        self.emptyFormImageView.alpha = 0.0f;
-        self.filledFormImageView.alpha = 1.0f;
+    self.progressHUD =[[MBProgressHUD alloc] initWithView:self.view];
+	[self.view addSubview:self.progressHUD];
+    self.progressHUD.labelText = @"Loading";
+	[self prepareSpinnerSteps];
+    [self.progressHUD show:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.2 target:self selector:@selector(updateSpinner) userInfo:nil repeats:YES];
+}
 
-    }];
-//    self.emptyFormImageView.hidden = YES;
-//    self.filledFormImageView.hidden = NO;
+
+- (void)prepareSpinnerSteps
+{
+    self.spinnerSteps = [NSMutableArray array];
+    [self.spinnerSteps addObject:NSLocalizedString(@"Finished!", nil)];
+    [self.spinnerSteps addObject:NSLocalizedString(@"Almost there...", nil)];
+    [self.spinnerSteps addObject:NSLocalizedString(@"Calculating...", nil)];
+    [self.spinnerSteps addObject:NSLocalizedString(@"Processing...", nil)];
+    [self.spinnerSteps addObject:NSLocalizedString(@"Sending...", nil)];
+}
+
+
+- (void)updateSpinner
+{
+    NSString *message = [self.spinnerSteps lastObject];
+    if (message) {
+        [self.spinnerSteps removeObject:message];
+        self.progressHUD.labelText = message;
+    } else {
+        self.progressHUD.removeFromSuperViewOnHide = YES;
+        [self.progressHUD hide:YES];
+        [self.timer invalidate];
+        self.timer = nil;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateTextFields) userInfo:nil repeats:YES];
+    }
+}
+
+
+- (NSMutableArray *)answers
+{
+    if (!_answers) _answers = [@[NSLocalizedString(@"Guess so", nil),
+                               NSLocalizedString(@"Don't know / NA", nil),
+                               NSLocalizedString(@"Buttload", nil),
+                               NSLocalizedString(@"Mushrooms, DMT", nil)] mutableCopy];
+    return _answers;
+}
+
+
+- (void)updateTextFields
+{
+    NSString *answer = [self.answers lastObject];
+    if (answer) {
+        [self.answers removeObject:answer];
+        UITextField *textField = [self textFieldWithTag:4 - [self.answers count]];
+        textField.text = answer;
+    } else {
+        [self.timer invalidate];
+        self.timer = nil;
+        self.answers = nil;
+    }
+}
+
+- (UITextField *)textFieldWithTag:(NSInteger)tag
+{
+    for (UITextField *textField in self.textFields) {
+        if (textField.tag == tag) {
+            return textField;
+            break;
+        }
+    }
+    return nil;
+}
+
+
+#pragma mark - UITextField delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)currentTextField
+{
+    NSInteger nextTag = currentTextField.tag + 1;
+    if (nextTag <= 4) {
+        for (UITextField *textField in self.textFields) {
+            if (textField.tag == nextTag) {
+                [currentTextField resignFirstResponder];
+                [textField becomeFirstResponder];
+                break;
+            }
+        }
+    } else {
+        [currentTextField resignFirstResponder];
+    }
+    return YES;
 }
 
 @end
