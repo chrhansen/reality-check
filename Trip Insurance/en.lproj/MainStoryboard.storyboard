@@ -281,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="412" y="-841"/>
         </scene>
-        <!--Text View Controller-->
+        <!--Reassuring Message View Controller-->
         <scene sceneID="yaN-8X-0qb">
             <objects>
-                <viewController id="B0J-8r-WHP" customClass="TextViewController" sceneMemberID="viewController">
+                <viewController id="B0J-8r-WHP" customClass="ReassuringMessageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hHl-qr-4oO">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

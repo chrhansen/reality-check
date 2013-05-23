@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
+
 - (IBAction)loginTapped:(id)sender;
 
 @end

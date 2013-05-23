@@ -32,9 +32,6 @@
 		E5375FBC1710C122008F378B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5375FBA1710C122008F378B /* InfoPlist.strings */; };
 		E5375FBE1710C122008F378B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FBD1710C122008F378B /* main.m */; };
 		E5375FC21710C122008F378B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FC11710C122008F378B /* AppDelegate.m */; };
-		E5375FC41710C122008F378B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E5375FC31710C122008F378B /* Default.png */; };
-		E5375FC61710C122008F378B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5375FC51710C122008F378B /* Default@2x.png */; };
-		E5375FC81710C122008F378B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5375FC71710C122008F378B /* Default-568h@2x.png */; };
 		E5375FCB1710C122008F378B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5375FC91710C122008F378B /* MainStoryboard.storyboard */; };
 		E5375FD61710C1AA008F378B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FD51710C1AA008F378B /* LoginViewController.m */; };
 		E5375FDB1710C5B1008F378B /* ChoseRealityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FDA1710C5B1008F378B /* ChoseRealityViewController.m */; };
@@ -62,12 +59,14 @@
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
-		E5A20C7F1710FE1700DB912F /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C7E1710FE1700DB912F /* TextViewController.m */; };
-		E5A20C831710FEB400DB912F /* RCTwilioHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C821710FEB400DB912F /* RCTwilioHelper.m */; };
+		E5A20C7F1710FE1700DB912F /* ReassuringMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */; };
 		E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */; };
 		E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B94B181711FC1300AD960F /* TripTrackerViewController.m */; };
 		E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */; };
 		E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */; };
+		E5BCD01E174DAB9100691A09 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */; };
+		E5BCD020174DAC0A00691A09 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BCD01F174DAC0A00691A09 /* Default@2x.png */; };
+		E5BCD022174DAC0E00691A09 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BCD021174DAC0E00691A09 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,9 +100,6 @@
 		E5375FBF1710C122008F378B /* Reality Check-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reality Check-Prefix.pch"; sourceTree = "<group>"; };
 		E5375FC01710C122008F378B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5375FC11710C122008F378B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E5375FC31710C122008F378B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		E5375FC51710C122008F378B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		E5375FC71710C122008F378B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E5375FCA1710C122008F378B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E5375FD41710C1AA008F378B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E5375FD51710C1AA008F378B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -152,16 +148,17 @@
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
-		E5A20C7D1710FE1700DB912F /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
-		E5A20C7E1710FE1700DB912F /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
-		E5A20C811710FEB400DB912F /* RCTwilioHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTwilioHelper.h; sourceTree = "<group>"; };
-		E5A20C821710FEB400DB912F /* RCTwilioHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTwilioHelper.m; sourceTree = "<group>"; };
+		E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReassuringMessageViewController.h; sourceTree = "<group>"; };
+		E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReassuringMessageViewController.m; sourceTree = "<group>"; };
 		E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_crackedOverlay@2x.png"; sourceTree = "<group>"; };
 		E5B94B171711FC1300AD960F /* TripTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTrackerViewController.h; sourceTree = "<group>"; };
 		E5B94B181711FC1300AD960F /* TripTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTrackerViewController.m; sourceTree = "<group>"; };
 		E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerBlank.png; sourceTree = "<group>"; };
 		E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realityCheck_tripTrackerComplete.png; sourceTree = "<group>"; };
-		E5D4EC8B1713EE05004F91FD /* RealityAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealityAPIKeys.h; sourceTree = "<group>"; };
+		E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		E5BCD01F174DAC0A00691A09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		E5BCD021174DAC0E00691A09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		E5BCD023174DBB1800691A09 /* RealityAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealityAPIKeys.h; path = "Trip Insurance/RealityAPIKeys.h"; sourceTree = "<group>"; };
 		E5D4EC8C1714124E004F91FD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +194,7 @@
 		E51373881711245700F0F279 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E5BCD024174DBB8200691A09 /* Launch Images */,
 				E5B94B1A1711FD1A00AD960F /* TripTracker */,
 				E51373B81711F1DD00F0F279 /* Hell Mode */,
 				E51373B21711E8DA00F0F279 /* realityCheck_menuBarLogo@2x.png */,
@@ -225,6 +223,7 @@
 				E55A8C9C1714146F00AFAE1D /* icon@2x.png */,
 				E5D4EC8C1714124E004F91FD /* icon.png */,
 				E5375FC91710C122008F378B /* MainStoryboard.storyboard */,
+				E5BCD023174DBB1800691A09 /* RealityAPIKeys.h */,
 				E5375FB71710C122008F378B /* Trip Insurance */,
 				E5375FB01710C122008F378B /* Frameworks */,
 				E5375FAF1710C122008F378B /* Products */,
@@ -258,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				E5375FFA1710D0D8008F378B /* Vendor */,
-				E5D4EC8B1713EE05004F91FD /* RealityAPIKeys.h */,
 				E5375FD41710C1AA008F378B /* LoginViewController.h */,
 				E5375FD51710C1AA008F378B /* LoginViewController.m */,
 				E5375FED1710C889008F378B /* LoginWebViewController.h */,
@@ -268,8 +266,6 @@
 				E5A20C801710FE2400DB912F /* Reality View Controllers */,
 				E53760231710E354008F378B /* RCLinkedInHelper.h */,
 				E53760241710E354008F378B /* RCLinkedInHelper.m */,
-				E5A20C811710FEB400DB912F /* RCTwilioHelper.h */,
-				E5A20C821710FEB400DB912F /* RCTwilioHelper.m */,
 				E5375FB81710C122008F378B /* Supporting Files */,
 			);
 			path = "Trip Insurance";
@@ -285,9 +281,6 @@
 				E5375FBA1710C122008F378B /* InfoPlist.strings */,
 				E5375FBD1710C122008F378B /* main.m */,
 				E5375FBF1710C122008F378B /* Reality Check-Prefix.pch */,
-				E5375FC31710C122008F378B /* Default.png */,
-				E5375FC51710C122008F378B /* Default@2x.png */,
-				E5375FC71710C122008F378B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -384,8 +377,8 @@
 				E5375FFE1710D85B008F378B /* LinkedInViewController.m */,
 				E5B94B171711FC1300AD960F /* TripTrackerViewController.h */,
 				E5B94B181711FC1300AD960F /* TripTrackerViewController.m */,
-				E5A20C7D1710FE1700DB912F /* TextViewController.h */,
-				E5A20C7E1710FE1700DB912F /* TextViewController.m */,
+				E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */,
+				E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */,
 				E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */,
 				E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */,
 				E51373A71711775200F0F279 /* MusicViewController.h */,
@@ -401,6 +394,16 @@
 				E5B94B241712033D00AD960F /* realityCheck_tripTrackerComplete.png */,
 			);
 			name = TripTracker;
+			sourceTree = "<group>";
+		};
+		E5BCD024174DBB8200691A09 /* Launch Images */ = {
+			isa = PBXGroup;
+			children = (
+				E5BCD021174DAC0E00691A09 /* Default.png */,
+				E5BCD01F174DAC0A00691A09 /* Default@2x.png */,
+				E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */,
+			);
+			name = "Launch Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,9 +458,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5375FBC1710C122008F378B /* InfoPlist.strings in Resources */,
-				E5375FC41710C122008F378B /* Default.png in Resources */,
-				E5375FC61710C122008F378B /* Default@2x.png in Resources */,
-				E5375FC81710C122008F378B /* Default-568h@2x.png in Resources */,
 				E5375FCB1710C122008F378B /* MainStoryboard.storyboard in Resources */,
 				E513738A1711246B00F0F279 /* realityCheck_backgroundGradient@2x.png in Resources */,
 				E513738C171125DE00F0F279 /* realityCheck_loginPage_linkedInLogo.png in Resources */,
@@ -479,6 +479,9 @@
 				E5B94B261712033D00AD960F /* realityCheck_tripTrackerComplete.png in Resources */,
 				E55A8C9B1714146C00AFAE1D /* icon.png in Resources */,
 				E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */,
+				E5BCD01E174DAB9100691A09 /* Default-568h@2x.png in Resources */,
+				E5BCD020174DAC0A00691A09 /* Default@2x.png in Resources */,
+				E5BCD022174DAC0E00691A09 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,8 +514,7 @@
 				E537601B1710E038008F378B /* AFXMLRequestOperation.m in Sources */,
 				E537601C1710E038008F378B /* UIImageView+AFNetworking.m in Sources */,
 				E53760251710E355008F378B /* RCLinkedInHelper.m in Sources */,
-				E5A20C7F1710FE1700DB912F /* TextViewController.m in Sources */,
-				E5A20C831710FEB400DB912F /* RCTwilioHelper.m in Sources */,
+				E5A20C7F1710FE1700DB912F /* ReassuringMessageViewController.m in Sources */,
 				E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */,
 				E51373A91711775200F0F279 /* MusicViewController.m in Sources */,
 				E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */,
@@ -613,6 +615,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Trip Insurance/Reality Check-Prefix.pch";
 				INFOPLIST_FILE = "Trip Insurance/Reality Check-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "Reality Check";
 				WRAPPER_EXTENSION = app;
@@ -630,6 +633,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Trip Insurance/Reality Check-Prefix.pch";
 				INFOPLIST_FILE = "Trip Insurance/Reality Check-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "Reality Check";
 				WRAPPER_EXTENSION = app;

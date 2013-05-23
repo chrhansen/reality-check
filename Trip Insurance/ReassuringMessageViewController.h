@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextViewController : UIViewController
+@interface ReassuringMessageViewController : UIViewController
 
 - (IBAction)doneTapped:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *backgroundLabel;

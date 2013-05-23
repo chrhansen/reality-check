@@ -6,13 +6,12 @@
 //  Copyright (c) 2013 ComedyHack. All rights reserved.
 //
 
-#import "TextViewController.h"
-#import "RCTwilioHelper.h"
+#import "ReassuringMessageViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define PhoneNumberKey @"PhoneNumberKey"
 
-@interface TextViewController ()
+@interface ReassuringMessageViewController ()
 
 @property (nonatomic, strong) NSMutableArray *texts;
 @property (nonatomic, strong) NSTimer *timer;
@@ -20,16 +19,8 @@
 
 @end
 
-@implementation TextViewController
+@implementation ReassuringMessageViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -43,16 +34,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self startSendingTextsIfPhoneNumberStored];
+    [self startShowingMessages];
 }
 
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 - (void)addTextShadowToLabel
@@ -65,16 +49,10 @@
     self.backgroundLabel.layer.shouldRasterize = YES;
 }
 
-- (void)startSendingTextsIfPhoneNumberStored
+- (void)startShowingMessages
 {
-    NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:PhoneNumberKey];
-    if (phoneNumber.length > 0) {
-        self.phoneNumber = phoneNumber;
         [self loadTexts];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(sendAText:) userInfo:nil repeats:YES];
-    } else {
-        [self showMissingPhoneNumberAlert];
-    }
 }
 
 
@@ -85,16 +63,6 @@
     self.timer = nil;
 }
 
-
-- (void)showMissingPhoneNumberAlert
-{
-    UIAlertView *alertView = [UIAlertView.alloc initWithTitle:NSLocalizedString(@"No Phone Number", nil)
-                                                      message:NSLocalizedString(@"To receive reassuring text messages, you have to add a phone number by logging out of reality and then enter your number as you log in again.", nil)
-                                                     delegate:nil
-                                            cancelButtonTitle:NSLocalizedString(@"OK", nil)
-                                            otherButtonTitles:nil];
-    [alertView show];
-}
 
 
 - (void)loadTexts
@@ -113,15 +81,23 @@
                   mutableCopy];
 }
 
+- (void)showAlertWithMessage:(NSString *)message
+{
+    UIAlertView *alertView = [UIAlertView.alloc initWithTitle:NSLocalizedString(@"Reality Check\u2122", nil)
+                                                      message:message
+                                                     delegate:nil
+                                            cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                            otherButtonTitles:nil];
+    [alertView show];
+}
 
-#define TwilioNumber @"+14158814311"
 
 - (void)sendAText:(NSTimer *)timer
 {
-    if (self.texts.lastObject) {
+    if ([self.texts count]) {
         NSString *text = self.texts[0];
         [self.texts removeObjectAtIndex:0];
-        [[RCTwilioHelper sharedHelper] sendTextFromNumber:TwilioNumber toNumber:self.phoneNumber bodyText:text];
+        [self showAlertWithMessage:text];
     } else {
         [self.timer invalidate];
         self.timer = nil;
