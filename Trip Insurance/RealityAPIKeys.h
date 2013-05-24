@@ -15,4 +15,6 @@
 #define RDIO_KEY    @"59pkuyudg3jrdmrqyc6r2rs8"
 #define RDIO_SECRET @"ur5FT9z9xQ"
 
+#define PUPPY_URL @"http://tapestri.es/f/QR1zCG8kj/"
+
 #endif

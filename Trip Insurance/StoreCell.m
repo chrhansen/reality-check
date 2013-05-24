@@ -10,14 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 @implementation StoreCell
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
 
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {

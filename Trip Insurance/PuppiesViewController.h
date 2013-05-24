@@ -11,6 +11,5 @@
 @interface PuppiesViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-- (IBAction)doneTapped:(id)sender;
 
 @end

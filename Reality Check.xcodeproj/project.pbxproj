@@ -69,6 +69,10 @@
 		E5523F02174F0634007D37C8 /* premium-reality.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F00174F0634007D37C8 /* premium-reality.png */; };
 		E5523F03174F0634007D37C8 /* premium-reality@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F01174F0634007D37C8 /* premium-reality@2x.png */; };
 		E5523F06174F0981007D37C8 /* PremiumRealityTapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */; };
+		E5523F0C174FEF69007D37C8 /* tanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F08174FEF68007D37C8 /* tanButton.png */; };
+		E5523F0D174FEF69007D37C8 /* tanButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F09174FEF68007D37C8 /* tanButton@2x.png */; };
+		E5523F0E174FEF69007D37C8 /* tanButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F0A174FEF68007D37C8 /* tanButtonHighlight.png */; };
+		E5523F0F174FEF69007D37C8 /* tanButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */; };
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
@@ -183,6 +187,10 @@
 		E5523F01174F0634007D37C8 /* premium-reality@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "premium-reality@2x.png"; sourceTree = "<group>"; };
 		E5523F04174F0981007D37C8 /* PremiumRealityTapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremiumRealityTapViewController.h; sourceTree = "<group>"; };
 		E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremiumRealityTapViewController.m; sourceTree = "<group>"; };
+		E5523F08174FEF68007D37C8 /* tanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanButton.png; sourceTree = "<group>"; };
+		E5523F09174FEF68007D37C8 /* tanButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButton@2x.png"; sourceTree = "<group>"; };
+		E5523F0A174FEF68007D37C8 /* tanButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanButtonHighlight.png; sourceTree = "<group>"; };
+		E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
@@ -273,6 +281,7 @@
 		E51373881711245700F0F279 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E5523F10174FEF6C007D37C8 /* Puppies */,
 				E5523EE8174F0240007D37C8 /* Store */,
 				E5BCD024174DBB8200691A09 /* Launch Images */,
 				E5B94B1A1711FD1A00AD960F /* TripTracker */,
@@ -457,6 +466,17 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
+		E5523F10174FEF6C007D37C8 /* Puppies */ = {
+			isa = PBXGroup;
+			children = (
+				E5523F08174FEF68007D37C8 /* tanButton.png */,
+				E5523F09174FEF68007D37C8 /* tanButton@2x.png */,
+				E5523F0A174FEF68007D37C8 /* tanButtonHighlight.png */,
+				E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */,
+			);
+			name = Puppies;
+			sourceTree = "<group>";
+		};
 		E59E055D174EEC2B0079D209 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +646,10 @@
 				E5523EF4174F0249007D37C8 /* greenButton@2x.png in Resources */,
 				E5523F02174F0634007D37C8 /* premium-reality.png in Resources */,
 				E5523F03174F0634007D37C8 /* premium-reality@2x.png in Resources */,
+				E5523F0C174FEF69007D37C8 /* tanButton.png in Resources */,
+				E5523F0D174FEF69007D37C8 /* tanButton@2x.png in Resources */,
+				E5523F0E174FEF69007D37C8 /* tanButtonHighlight.png in Resources */,
+				E5523F0F174FEF69007D37C8 /* tanButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

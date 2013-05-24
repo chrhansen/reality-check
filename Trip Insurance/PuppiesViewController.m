@@ -7,25 +7,16 @@
 //
 
 #import "PuppiesViewController.h"
+#import "RealityAPIKeys.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PuppiesViewController ()
+
+@property (nonatomic, weak) IBOutlet UIButton *doneButton;
 
 @end
 
 @implementation PuppiesViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-//#define PUPPY_URL @"http://tapestri.es/f/QR1zCG8kj/"
-#define PUPPY_URL @"http://tapestri.es/f/QR1zCG8kj/"
-
 
 - (void)viewDidLoad
 {
@@ -36,23 +27,48 @@
 	// Do any additional setup after loading the view.
 }
 
-
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     [self hideNavigationBar:YES];
 }
 
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+}
+
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    [self styleButton];
+}
+
+-(void)styleButton
+{
+    self.doneButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.doneButton.layer.shadowRadius = 5.0f;
+    self.doneButton.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+    self.doneButton.layer.shadowOpacity = 0.7f;
+    self.doneButton.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    self.doneButton.layer.shouldRasterize = YES;
+    self.doneButton.alpha = 0.7f;
+    
+    UIImage *buttonImage = [[UIImage imageNamed:@"tanButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *highlightedButtonImage = [[UIImage imageNamed:@"tanButtonHighlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [self.doneButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [self.doneButton setBackgroundImage:highlightedButtonImage forState:UIControlStateHighlighted];
+    
+    [self.doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
 }
 
 - (void)hideNavigationBar:(BOOL)hide
 {
-//    [[UIApplication sharedApplication] setStatusBarHidden:hide withAnimation:UIStatusBarAnimationSlide];
+    [[UIApplication sharedApplication] setStatusBarHidden:hide withAnimation:UIStatusBarAnimationSlide];
     [self.navigationController setNavigationBarHidden:hide animated:YES];
 }
 

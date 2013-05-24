@@ -119,13 +119,6 @@ typedef enum {
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 - (void)adjustPositionsFor4InchPhone
 {
     // Adjust button positions
@@ -149,7 +142,9 @@ typedef enum {
 
 - (IBAction)logoutOfRealityTapped:(id)sender
 {
-    [self toggleHellModeTapped:nil];
+    if (self.state == RealityStateHellMode) {
+        [self toggleHellModeTapped:nil];
+    }
     [self.delegate choseRealityViewControllerDidTapLogout:self];
 }
 
