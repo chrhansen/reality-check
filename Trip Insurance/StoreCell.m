@@ -34,7 +34,8 @@
         self.mainImageView.layer.shadowOpacity = 0.5f;
         self.mainImageView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
         self.mainImageView.layer.shouldRasterize = YES;
-        
+        self.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"realityCheck_backgroundGradient"]];
+
         [self configureBuyButton];
         [self addTextShadow];        
     }

@@ -78,6 +78,8 @@
 		E5523F19174FFD55007D37C8 /* whiteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F15174FFD55007D37C8 /* whiteButton@2x.png */; };
 		E5523F1A174FFD55007D37C8 /* whiteButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F16174FFD55007D37C8 /* whiteButtonHighlight.png */; };
 		E5523F1B174FFD55007D37C8 /* whiteButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F17174FFD55007D37C8 /* whiteButtonHighlight@2x.png */; };
+		E5523F1F17501416007D37C8 /* greenButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F1D17501416007D37C8 /* greenButtonHighlight.png */; };
+		E5523F2017501416007D37C8 /* greenButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F1E17501416007D37C8 /* greenButtonHighlight@2x.png */; };
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
@@ -201,6 +203,8 @@
 		E5523F15174FFD55007D37C8 /* whiteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButton@2x.png"; sourceTree = "<group>"; };
 		E5523F16174FFD55007D37C8 /* whiteButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonHighlight.png; sourceTree = "<group>"; };
 		E5523F17174FFD55007D37C8 /* whiteButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		E5523F1D17501416007D37C8 /* greenButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButtonHighlight.png; sourceTree = "<group>"; };
+		E5523F1E17501416007D37C8 /* greenButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
@@ -470,6 +474,8 @@
 				E5523EEA174F0249007D37C8 /* blueButton@2x.png */,
 				E5523EEB174F0249007D37C8 /* blueButtonHighlight.png */,
 				E5523EEC174F0249007D37C8 /* blueButtonHighlight@2x.png */,
+				E5523F1D17501416007D37C8 /* greenButtonHighlight.png */,
+				E5523F1E17501416007D37C8 /* greenButtonHighlight@2x.png */,
 				E5523EED174F0249007D37C8 /* greenButton.png */,
 				E5523EEE174F0249007D37C8 /* greenButton@2x.png */,
 			);
@@ -666,6 +672,8 @@
 				E5523F19174FFD55007D37C8 /* whiteButton@2x.png in Resources */,
 				E5523F1A174FFD55007D37C8 /* whiteButtonHighlight.png in Resources */,
 				E5523F1B174FFD55007D37C8 /* whiteButtonHighlight@2x.png in Resources */,
+				E5523F1F17501416007D37C8 /* greenButtonHighlight.png in Resources */,
+				E5523F2017501416007D37C8 /* greenButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

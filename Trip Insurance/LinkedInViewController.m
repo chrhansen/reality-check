@@ -10,20 +10,9 @@
 #import "RCLinkedInHelper.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface LinkedInViewController ()
-
-@end
-
 @implementation LinkedInViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
@@ -38,25 +27,12 @@
 }
 
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-//    [self testAnimation];
-}
-
-
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
     if([UIScreen mainScreen].bounds.size.height == 568.0f) {
         [self adjustPositionsFor4InchPhone];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -90,8 +66,6 @@
     [[RCLinkedInHelper sharedHelper] fetchHighResPhotoForCurrentUserSuccess:^(id JSON) {
         NSString *highResPath = [JSON[@"values"] lastObject];
         if (highResPath) [self.profileImageView setImageWithURL:[NSURL URLWithString:highResPath]];
-        
-        //[self updateUIWithDictionary:JSON];
     } failure:^(NSError *error, id JSON) {
         NSLog(@"error: %@", error.localizedDescription);
     }];
