@@ -14,6 +14,9 @@
 @property (nonatomic, strong) MBProgressHUD *wordHUD;
 @property (nonatomic, strong) NSArray *streams;
 @property (nonatomic, strong) NSMutableArray *currentStream;
+@property (nonatomic) NSUInteger currentWordIndex;
+@property (nonatomic, strong) NSMutableArray *wordLocations;
+@property (nonatomic, getter = isStreamFinished) BOOL streamFinished;
 
 @end
 
@@ -26,7 +29,7 @@
     UIImageView *titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
     self.navigationItem.titleView = titleView;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"realityCheck_backgroundGradient"]];
-
+    
 }
 
 
@@ -38,14 +41,20 @@
 - (MBProgressHUD *)wordHUD
 {
     if (!_wordHUD) {
-        _wordHUD = [[MBProgressHUD alloc] initWithView:self.view];
-        _wordHUD.mode = MBProgressHUDModeText;
-        _wordHUD.labelText = @"Test";
-        _wordHUD.margin = 10.f;
-//        _wordHUD.removeFromSuperViewOnHide = YES;
+        _wordHUD = [self defaultHUD];
         [self.view addSubview:_wordHUD];
     }
     return _wordHUD;
+}
+
+- (MBProgressHUD *)defaultHUD
+{
+    MBProgressHUD *defaultHUD = [[MBProgressHUD alloc] initWithView:self.view];
+    defaultHUD.mode = MBProgressHUDModeText;
+    defaultHUD.labelText = @"Test";
+    defaultHUD.margin = 10.f;
+    _wordHUD.removeFromSuperViewOnHide = YES;
+    return defaultHUD;
 }
 
 
@@ -61,6 +70,24 @@
     [self.wordHUD show:NO];
 }
 
+
+- (void)showWords:(NSArray *)words atLocations:(NSArray *)locations
+{
+    if ([words count] != [locations count]) return;
+    
+    for (NSUInteger index = 0; index < [words count]; index++) {
+        MBProgressHUD *HUD = [self defaultHUD];
+        HUD.labelText = words[index];
+        CGPoint offset = [self centerOffsetForLocation:[locations[index] CGPointValue]];
+        HUD.xOffset = offset.x;
+        HUD.yOffset = offset.y - FINGERPOINT_OFFSET;
+        HUD.removeFromSuperViewOnHide = YES;
+        [self.view addSubview:HUD];
+        [HUD show:NO];
+    }
+}
+
+
 - (CGPoint)centerOffsetForLocation:(CGPoint)location
 {
     CGPoint offset;
@@ -70,13 +97,34 @@
 }
 
 
+- (void)resetHUDs
+{
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    self.wordHUD = nil;
+    self.streamFinished = NO;
+    self.currentWordIndex = 0;
+}
+
 - (IBAction)tapGesture:(UITapGestureRecognizer *)tapGesture
 {
+    if (self.isStreamFinished) {
+        [self resetHUDs];
+        return;
+    }
+    
+    
+    
     CGPoint tapLocation = [tapGesture locationInView:self.view];
-    NSString *word = self.currentStream[0];
-    [self.currentStream removeObject:word];
-    if (![self.currentStream count]) self.currentStream = nil;
-    [self showWord:word atLocation:tapLocation];
+    if (self.currentWordIndex > [self.currentStream count] - 1) {
+        [self showWords:self.currentStream atLocations:self.wordLocations];
+        self.streamFinished = YES;
+        self.currentStream = nil;
+    } else {
+        NSString *word = self.currentStream[self.currentWordIndex];
+        self.currentWordIndex++;
+        [self showWord:word atLocation:tapLocation];
+        [self.wordLocations addObject:[NSValue valueWithCGPoint:tapLocation]];
+    }
 }
 
 
@@ -98,6 +146,8 @@
     if (!_currentStream) {
         NSInteger randomIndex = arc4random() % [self.streams count];
         _currentStream = [[[self.streams[randomIndex] copy] componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] mutableCopy];
+        self.currentWordIndex = 0;
+        self.wordLocations = [NSMutableArray array];
     }
     return _currentStream;
 }
