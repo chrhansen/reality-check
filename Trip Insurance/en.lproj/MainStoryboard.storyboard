@@ -104,7 +104,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="b4N-ew-edz" kind="modal" identifier="show texts" id="wgg-kU-1dm"/>
+                                    <segue destination="DBV-jR-G59" kind="modal" identifier="show texts" id="bZ9-4d-UQf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9z-Ah-UoZ">
@@ -289,7 +289,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fm-0o-92d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="-43"/>
+            <point key="canvasLocation" x="1388" y="727"/>
+        </scene>
+        <!--Premium Reality Tap View Controller-->
+        <scene sceneID="6Ou-UT-n8S">
+            <objects>
+                <viewController id="9i0-Kv-Lld" customClass="PremiumRealityTapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baU-aW-j6Y">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EU3-sZ-owQ" appends="YES" id="wgO-dK-vJP"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nun-Hd-k32"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWa-Gb-ldB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EU3-sZ-owQ">
+                    <connections>
+                        <action selector="tapGesture:" destination="9i0-Kv-Lld" id="ITr-qi-3vT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1373" y="-142"/>
         </scene>
         <!--Linked In View Controller-->
         <scene sceneID="J4l-JY-gwC">
@@ -731,7 +755,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdY-Ze-EeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="-43"/>
+            <point key="canvasLocation" x="968" y="735"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0g6-7P-4k7">
@@ -789,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1je-QM-v6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377" y="682"/>
+            <point key="canvasLocation" x="2903" y="682"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YyY-76-7Vg">
@@ -825,7 +849,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNy-T9-yiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="682"/>
+            <point key="canvasLocation" x="2431" y="682"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nfL-tu-1Hw">
@@ -968,6 +992,24 @@
             </objects>
             <point key="canvasLocation" x="362" y="-1481"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dIE-Av-cc2">
+            <objects>
+                <navigationController id="DBV-jR-G59" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iyt-Uv-7Z5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9i0-Kv-Lld" kind="relationship" relationship="rootViewController" id="wkH-dd-vOe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pl-wz-VK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="-142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_realityCheck_btn_calmingImagery@2x.png" width="230" height="230"/>
@@ -1040,6 +1082,12 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PremiumRealityTapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PremiumRealityTapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="tapGesture:" candidateClass="UITapGestureRecognizer"/>
+            </relationships>
         </class>
         <class className="PuppiesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PuppiesViewController.h"/>

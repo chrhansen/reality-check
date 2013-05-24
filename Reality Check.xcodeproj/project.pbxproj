@@ -68,6 +68,7 @@
 		E5523EF4174F0249007D37C8 /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523EEE174F0249007D37C8 /* greenButton@2x.png */; };
 		E5523F02174F0634007D37C8 /* premium-reality.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F00174F0634007D37C8 /* premium-reality.png */; };
 		E5523F03174F0634007D37C8 /* premium-reality@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F01174F0634007D37C8 /* premium-reality@2x.png */; };
+		E5523F06174F0981007D37C8 /* PremiumRealityTapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */; };
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
@@ -180,6 +181,8 @@
 		E5523EEE174F0249007D37C8 /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
 		E5523F00174F0634007D37C8 /* premium-reality.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "premium-reality.png"; sourceTree = "<group>"; };
 		E5523F01174F0634007D37C8 /* premium-reality@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "premium-reality@2x.png"; sourceTree = "<group>"; };
+		E5523F04174F0981007D37C8 /* PremiumRealityTapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PremiumRealityTapViewController.h; sourceTree = "<group>"; };
+		E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PremiumRealityTapViewController.m; sourceTree = "<group>"; };
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
@@ -486,6 +489,8 @@
 				E5B94B181711FC1300AD960F /* TripTrackerViewController.m */,
 				E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */,
 				E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */,
+				E5523F04174F0981007D37C8 /* PremiumRealityTapViewController.h */,
+				E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */,
 				E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */,
 				E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */,
 				E51373A71711775200F0F279 /* MusicViewController.h */,
@@ -666,6 +671,7 @@
 				E5E9CA88174EF22F00ABAA64 /* StoreViewController.m in Sources */,
 				E5E9CA8C174EF3FF00ABAA64 /* SKProduct+PriceAsString.m in Sources */,
 				E5E9CA94174EFA1B00ABAA64 /* NSData+MKBase64.m in Sources */,
+				E5523F06174F0981007D37C8 /* PremiumRealityTapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

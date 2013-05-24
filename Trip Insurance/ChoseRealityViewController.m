@@ -81,9 +81,10 @@ typedef enum {
     }
 }
 
-
+#warning Remove YES below!!
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
+    return YES; 
     if ([identifier isEqualToString:@"show texts"]) {
         if ([MKStoreManager isFeaturePurchased:@"PremiumReality"]) {
             return YES;
