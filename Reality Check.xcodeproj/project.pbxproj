@@ -79,7 +79,6 @@
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
 		E59E0551174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E59E0550174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png */; };
 		E59E055C174EEBE30079D209 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E59E055B174EEBE20079D209 /* StoreCell.m */; };
-		E5A20C7F1710FE1700DB912F /* ReassuringMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */; };
 		E5B94B161711FB4700AD960F /* realityCheck_crackedOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */; };
 		E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B94B181711FC1300AD960F /* TripTrackerViewController.m */; };
 		E5B94B251712033D00AD960F /* realityCheck_tripTrackerBlank.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */; };
@@ -200,8 +199,6 @@
 		E59E0550174ECCC90079D209 /* btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_realityCheck_btn_reassuringTextMessages_disabled_x2.png; sourceTree = "<group>"; };
 		E59E055A174EEBE20079D209 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
 		E59E055B174EEBE20079D209 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
-		E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReassuringMessageViewController.h; sourceTree = "<group>"; };
-		E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReassuringMessageViewController.m; sourceTree = "<group>"; };
 		E5B94B151711FB4700AD960F /* realityCheck_crackedOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "realityCheck_crackedOverlay@2x.png"; sourceTree = "<group>"; };
 		E5B94B171711FC1300AD960F /* TripTrackerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTrackerViewController.h; sourceTree = "<group>"; };
 		E5B94B181711FC1300AD960F /* TripTrackerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTrackerViewController.m; sourceTree = "<group>"; };
@@ -518,8 +515,6 @@
 				E51373A81711775200F0F279 /* MusicViewController.m */,
 				E5523F04174F0981007D37C8 /* PremiumRealityTapViewController.h */,
 				E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */,
-				E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */,
-				E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */,
 			);
 			name = "Reality View Controllers";
 			sourceTree = "<group>";
@@ -687,7 +682,6 @@
 				E537601B1710E038008F378B /* AFXMLRequestOperation.m in Sources */,
 				E537601C1710E038008F378B /* UIImageView+AFNetworking.m in Sources */,
 				E53760251710E355008F378B /* RCLinkedInHelper.m in Sources */,
-				E5A20C7F1710FE1700DB912F /* ReassuringMessageViewController.m in Sources */,
 				E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */,
 				E51373A91711775200F0F279 /* MusicViewController.m in Sources */,
 				E5B94B191711FC1300AD960F /* TripTrackerViewController.m in Sources */,

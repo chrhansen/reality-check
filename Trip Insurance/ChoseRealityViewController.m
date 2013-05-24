@@ -128,21 +128,21 @@ typedef enum {
 - (void)adjustPositionsFor4InchPhone
 {
     // Adjust button positions
-    self.linkedInButton.center = CGPointMake(94, 70);
-    self.tripTrackerButton.center = CGPointMake(227, 70);
-    self.soothingSoundsButton.center = CGPointMake(94, 210);
-    self.playWithPuppiesButton.center = CGPointMake(227, 210);
-    self.hellModeButton.center = CGPointMake(94, 350);
-    self.textMessageButton.center = CGPointMake(227, 350);
+    self.linkedInButton.center = CGPointMake(94, 80);
+    self.tripTrackerButton.center = CGPointMake(227, 80);
+    self.soothingSoundsButton.center = CGPointMake(94, 240);
+    self.playWithPuppiesButton.center = CGPointMake(227, 240);
+    self.hellModeButton.center = CGPointMake(94, 390);
+    self.textMessageButton.center = CGPointMake(227, 390);
 
     CGFloat labelOffset = 60.0f;
     // Adjust label positions
-    self.linkedInLabel.center = CGPointMake(94, 70+labelOffset);
-    self.tripTrackerLabel.center = CGPointMake(227, 70+labelOffset);
-    self.soothingLabel.center = CGPointMake(94, 210+labelOffset);
-    self.puppiesLabel.center = CGPointMake(227, 210+labelOffset);
-    self.hellModeLabel.center = CGPointMake(94, 350+labelOffset);
-    self.textLabel.center = CGPointMake(227, 350+labelOffset);
+    self.linkedInLabel.center = CGPointMake(94, 80+labelOffset);
+    self.tripTrackerLabel.center = CGPointMake(227, 80+labelOffset);
+    self.soothingLabel.center = CGPointMake(94, 240+labelOffset);
+    self.puppiesLabel.center = CGPointMake(227, 240+labelOffset);
+    self.hellModeLabel.center = CGPointMake(94, 390+labelOffset);
+    self.textLabel.center = CGPointMake(227, 390+labelOffset);
 }
 
 
