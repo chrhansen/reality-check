@@ -9,6 +9,7 @@
 #import "ChoseRealityViewController.h"
 #import <Rdio/Rdio.h>
 #import "MKStoreManager.h"
+#import "RealityAPIKeys.h"
 
 typedef enum {
     RealityStateNormal, 
@@ -16,12 +17,23 @@ typedef enum {
 } RealityState;
 
 
-//Rd.io keys
-//Application: Reality Check
-#define RDIO_KEY    @"59pkuyudg3jrdmrqyc6r2rs8"
-#define RDIO_SECRET @"ur5FT9z9xQ"
-
 @interface ChoseRealityViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *linkedInButton;
+@property (weak, nonatomic) IBOutlet UIButton *tripTrackerButton;
+@property (weak, nonatomic) IBOutlet UIButton *textMessageButton;
+@property (weak, nonatomic) IBOutlet UIButton *playWithPuppiesButton;
+@property (weak, nonatomic) IBOutlet UIButton *hellModeButton;
+@property (weak, nonatomic) IBOutlet UIButton *soothingSoundsButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *linkedInLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tripTrackerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *puppiesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hellModeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *soothingLabel;
+
+- (IBAction)toggleHellModeTapped:(id)sender;
 
 @property (nonatomic, strong) Rdio *rdio;
 @property (nonatomic) RealityState state;
@@ -57,8 +69,8 @@ typedef enum {
 {
     [super viewWillAppear:animated];
     [self startMusicIfNotPlaying];
+    [self updateUIForPremium];
 }
-
 
 - (void)viewDidLayoutSubviews
 {
@@ -67,6 +79,18 @@ typedef enum {
         [self adjustPositionsFor4InchPhone];
     }
 }
+
+- (void)updateUIForPremium
+{
+    if ([MKStoreManager isFeaturePurchased:@"PremiumReality"]) {
+        [self.textMessageButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_reassuringTextMessages_x2"] forState:UIControlStateNormal];
+        [self.textLabel setTextColor:[UIColor whiteColor]];
+    } else {
+        [self.textMessageButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_reassuringTextMessages_disabled_x2"] forState:UIControlStateNormal];
+        [self.textLabel setTextColor:[UIColor lightGrayColor]];
+    }
+}
+
 
 - (void)dealloc
 {
@@ -81,10 +105,8 @@ typedef enum {
     }
 }
 
-#warning Remove YES below!!
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    return YES; 
     if ([identifier isEqualToString:@"show texts"]) {
         if ([MKStoreManager isFeaturePurchased:@"PremiumReality"]) {
             return YES;
@@ -127,6 +149,7 @@ typedef enum {
 
 - (IBAction)logoutOfRealityTapped:(id)sender
 {
+    [self toggleHellModeTapped:nil];
     [self.delegate choseRealityViewControllerDidTapLogout:self];
 }
 
@@ -200,15 +223,25 @@ typedef enum {
     switch (self.state) {
         case RealityStateNormal:
             [self.linkedInButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_confirmYourIdentity_x2.png"] forState:UIControlStateNormal];
+            self.linkedInButton.enabled = YES;
             [self.tripTrackerButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_tripTracker_x2.png"] forState:UIControlStateNormal];
+            self.tripTrackerButton.enabled = YES;
             [self.textMessageButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_reassuringTextMessages_x2.png"] forState:UIControlStateNormal];
+            self.textMessageButton.enabled = YES;
             [self.playWithPuppiesButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_playWithPuppies_x2.png"] forState:UIControlStateNormal];
+            self.playWithPuppiesButton.enabled = YES;
+            self.soothingSoundsButton.enabled = YES;
             break;
         case RealityStateHellMode:
             [self.linkedInButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_confirmYourIdentity_broken.png"] forState:UIControlStateNormal];
             [self.tripTrackerButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_tripTracker_broken@2x.png"] forState:UIControlStateNormal];
             [self.textMessageButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_reassuringTextMessages_broken@2x.png"] forState:UIControlStateNormal];
             [self.playWithPuppiesButton setImage:[UIImage imageNamed:@"btn_realityCheck_btn_playWithPuppies_broken@2x.png"] forState:UIControlStateNormal];
+            self.linkedInButton.enabled = NO;
+            self.tripTrackerButton.enabled = NO;
+            self.textMessageButton.enabled = NO;
+            self.playWithPuppiesButton.enabled = NO;
+            self.soothingSoundsButton.enabled = NO;
             break;
             
         default:
