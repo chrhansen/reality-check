@@ -35,8 +35,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if ([[RCLinkedInHelper sharedHelper] hasAccess]
-        && [[NSUserDefaults standardUserDefaults] boolForKey:AlreadyPromptedForPhoneNumberKey] == YES) {
+    if ([[RCLinkedInHelper sharedHelper] hasAccess]) {
         [self performSegueWithIdentifier:@"show reality options" sender:self];
     }
 }
@@ -68,6 +67,9 @@
                              }
                              [weakSelf dismissViewControllerAnimated:YES completion:^{
                                  NSLog(@"completed login");
+                                 if ([RCLinkedInHelper.sharedHelper hasAccess]) {
+                                     [weakSelf performSegueWithIdentifier:@"show reality options" sender:weakSelf];
+                                 }
                              }];
                          }];
                      }];
