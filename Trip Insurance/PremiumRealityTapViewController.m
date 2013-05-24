@@ -17,6 +17,7 @@
 @property (nonatomic) NSUInteger currentWordIndex;
 @property (nonatomic, strong) NSMutableArray *wordLocations;
 @property (nonatomic, getter = isStreamFinished) BOOL streamFinished;
+@property (weak, nonatomic) IBOutlet UILabel *tapMeLabel;
 
 @end
 
@@ -30,6 +31,12 @@
     self.navigationItem.titleView = titleView;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"realityCheck_backgroundGradient"]];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tapMeLabel.hidden = NO;
 }
 
 
@@ -109,6 +116,7 @@
     self.wordHUD = nil;
     self.streamFinished = NO;
     self.currentWordIndex = 0;
+    self.tapMeLabel.hidden = NO;
 }
 
 - (IBAction)tapGesture:(UITapGestureRecognizer *)tapGesture
@@ -118,7 +126,7 @@
         return;
     }
     
-    
+    self.tapMeLabel.hidden = YES;
     
     CGPoint tapLocation = [tapGesture locationInView:self.view];
     if (self.currentWordIndex > [self.currentStream count] - 1) {
