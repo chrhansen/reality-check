@@ -79,8 +79,20 @@
 - (void)choseRealityViewControllerDidTapLogout:(ChoseRealityViewController *)choseRealityViewController
 {
     [RCLinkedInHelper.sharedHelper logout];
+    [self removeWebViewCookies];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+
+- (void)removeWebViewCookies
+{
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *cookie in [storage cookies]) {
+        if (cookie.isSecure) {
+            [storage deleteCookie:cookie];
+        }
+    }
+}
 
 @end
