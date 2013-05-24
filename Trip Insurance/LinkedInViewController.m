@@ -12,8 +12,6 @@
 
 @implementation LinkedInViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

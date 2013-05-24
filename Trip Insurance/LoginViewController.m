@@ -11,9 +11,6 @@
 #import "LoginWebViewController.h"
 #import "RCLinkedInHelper.h"
 
-#define AlreadyPromptedForPhoneNumberKey @"AlreadyPromptedForPhoneNumberKey"
-#define PhoneNumberKey @"PhoneNumberKey"
-
 @interface LoginViewController () <ChoseRealityViewControllerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSString *oauthToken;
