@@ -73,6 +73,7 @@
 		E5523F0D174FEF69007D37C8 /* tanButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F09174FEF68007D37C8 /* tanButton@2x.png */; };
 		E5523F0E174FEF69007D37C8 /* tanButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F0A174FEF68007D37C8 /* tanButtonHighlight.png */; };
 		E5523F0F174FEF69007D37C8 /* tanButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */; };
+		E5523F13174FF603007D37C8 /* UINavigationController+Rotations.m in Sources */ = {isa = PBXBuildFile; fileRef = E5523F12174FF603007D37C8 /* UINavigationController+Rotations.m */; };
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
@@ -191,6 +192,8 @@
 		E5523F09174FEF68007D37C8 /* tanButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButton@2x.png"; sourceTree = "<group>"; };
 		E5523F0A174FEF68007D37C8 /* tanButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanButtonHighlight.png; sourceTree = "<group>"; };
 		E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		E5523F11174FF602007D37C8 /* UINavigationController+Rotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotations.h"; sourceTree = "<group>"; };
+		E5523F12174FF603007D37C8 /* UINavigationController+Rotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotations.m"; sourceTree = "<group>"; };
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
@@ -351,6 +354,8 @@
 				E59E055D174EEC2B0079D209 /* Views */,
 				E53760231710E354008F378B /* RCLinkedInHelper.h */,
 				E53760241710E354008F378B /* RCLinkedInHelper.m */,
+				E5523F11174FF602007D37C8 /* UINavigationController+Rotations.h */,
+				E5523F12174FF603007D37C8 /* UINavigationController+Rotations.m */,
 				E5375FB81710C122008F378B /* Supporting Files */,
 			);
 			path = "Trip Insurance";
@@ -507,14 +512,14 @@
 				E5375FFE1710D85B008F378B /* LinkedInViewController.m */,
 				E5B94B171711FC1300AD960F /* TripTrackerViewController.h */,
 				E5B94B181711FC1300AD960F /* TripTrackerViewController.m */,
-				E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */,
-				E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */,
-				E5523F04174F0981007D37C8 /* PremiumRealityTapViewController.h */,
-				E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */,
 				E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */,
 				E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */,
 				E51373A71711775200F0F279 /* MusicViewController.h */,
 				E51373A81711775200F0F279 /* MusicViewController.m */,
+				E5523F04174F0981007D37C8 /* PremiumRealityTapViewController.h */,
+				E5523F05174F0981007D37C8 /* PremiumRealityTapViewController.m */,
+				E5A20C7D1710FE1700DB912F /* ReassuringMessageViewController.h */,
+				E5A20C7E1710FE1700DB912F /* ReassuringMessageViewController.m */,
 			);
 			name = "Reality View Controllers";
 			sourceTree = "<group>";
@@ -696,6 +701,7 @@
 				E5E9CA8C174EF3FF00ABAA64 /* SKProduct+PriceAsString.m in Sources */,
 				E5E9CA94174EFA1B00ABAA64 /* NSData+MKBase64.m in Sources */,
 				E5523F06174F0981007D37C8 /* PremiumRealityTapViewController.m in Sources */,
+				E5523F13174FF603007D37C8 /* UINavigationController+Rotations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

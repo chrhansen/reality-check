@@ -44,6 +44,12 @@
     self.timer = nil;
 }
 
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (IBAction)doneTapped:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

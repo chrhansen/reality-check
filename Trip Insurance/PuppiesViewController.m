@@ -47,6 +47,11 @@
     [self styleButton];
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscape;
+}
+
 -(void)styleButton
 {
     self.doneButton.layer.shadowColor = [UIColor blackColor].CGColor;

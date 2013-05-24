@@ -38,6 +38,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (MBProgressHUD *)wordHUD
 {
     if (!_wordHUD) {

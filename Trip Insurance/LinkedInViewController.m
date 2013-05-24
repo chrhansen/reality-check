@@ -59,6 +59,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)adjustPositionsFor4InchPhone
 {
     self.jobPositionLabel.center = CGPointMake(160.0f, 232.0f);

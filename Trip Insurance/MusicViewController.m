@@ -55,12 +55,10 @@
     [self stopMusic];
 }
 
-- (void)didReceiveMemoryWarning
+- (NSUInteger)supportedInterfaceOrientations
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return UIInterfaceOrientationMaskPortrait;
 }
-
 
 - (void)addTextShadowToLabel
 {
