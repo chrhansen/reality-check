@@ -70,6 +70,7 @@ typedef enum {
     [super viewWillAppear:animated];
     [self startMusicIfNotPlaying];
     [self updateUIForPremium];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 }
 
 - (void)viewDidLayoutSubviews

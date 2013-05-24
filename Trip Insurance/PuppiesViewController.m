@@ -33,14 +33,6 @@
     [self hideNavigationBar:YES];
 }
 
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-}
-
-
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
