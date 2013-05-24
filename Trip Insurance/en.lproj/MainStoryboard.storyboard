@@ -252,45 +252,6 @@
             </objects>
             <point key="canvasLocation" x="362" y="-885"/>
         </scene>
-        <!--Reassuring Message View Controller-->
-        <scene sceneID="yaN-8X-0qb">
-            <objects>
-                <viewController id="B0J-8r-WHP" customClass="ReassuringMessageViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hHl-qr-4oO">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="It's OK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-t8-chS">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="c3U-cl-rQ8"/>
-                                    <constraint firstAttribute="height" constant="76" id="iGd-wK-HRg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="eOE-t8-chS" firstAttribute="centerX" secondItem="hHl-qr-4oO" secondAttribute="centerX" type="default" id="QFQ-0N-YpW"/>
-                            <constraint firstItem="eOE-t8-chS" firstAttribute="centerY" secondItem="hHl-qr-4oO" secondAttribute="centerY" type="default" id="aPI-bG-Bbb"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="1da-TR-rXo">
-                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="waa-pJ-07b">
-                            <connections>
-                                <action selector="doneTapped:" destination="B0J-8r-WHP" id="TSz-Nr-HaO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="backgroundLabel" destination="eOE-t8-chS" id="pcb-Bu-iIh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fm-0o-92d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1388" y="727"/>
-        </scene>
         <!--Premium Reality Tap View Controller-->
         <scene sceneID="6Ou-UT-n8S">
             <objects>
@@ -304,7 +265,13 @@
                             <outletCollection property="gestureRecognizers" destination="EU3-sZ-owQ" appends="YES" id="wgO-dK-vJP"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="Nun-Hd-k32"/>
+                    <navigationItem key="navigationItem" id="Nun-Hd-k32">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="3Fu-Jq-d80">
+                            <connections>
+                                <action selector="doneTapped:" destination="9i0-Kv-Lld" id="Cqp-HH-77X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWa-Gb-ldB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="EU3-sZ-owQ">
@@ -739,25 +706,6 @@
             <point key="canvasLocation" x="2377" y="-43"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="gwD-hp-YlT">
-            <objects>
-                <navigationController id="b4N-ew-edz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="obd-88-ELM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="B0J-8r-WHP" kind="relationship" relationship="rootViewController" id="Ya4-Xa-R6Z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OdY-Ze-EeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="968" y="735"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="0g6-7P-4k7">
             <objects>
                 <navigationController id="9FN-Bg-j8s" sceneMemberID="viewController">
@@ -1086,6 +1034,7 @@
         <class className="PremiumRealityTapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PremiumRealityTapViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doneTapped:"/>
                 <relationship kind="action" name="tapGesture:" candidateClass="UITapGestureRecognizer"/>
             </relationships>
         </class>
@@ -1095,13 +1044,6 @@
                 <relationship kind="action" name="doneTapped:"/>
                 <relationship kind="action" name="handleLongPress:" candidateClass="UILongPressGestureRecognizer"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="ReassuringMessageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReassuringMessageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="outlet" name="backgroundLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="StoreCell" superclassName="UICollectionViewCell">

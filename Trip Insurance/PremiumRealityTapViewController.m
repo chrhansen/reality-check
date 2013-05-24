@@ -30,6 +30,11 @@
 }
 
 
+- (IBAction)doneTapped:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (MBProgressHUD *)wordHUD
 {
     if (!_wordHUD) {
