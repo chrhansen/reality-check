@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) MBProgressHUD *progressHUD;
 @property (nonatomic, strong) NSMutableArray *spinnerSteps;
-@property (nonatomic, strong) NSMutableArray *answers;
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
@@ -100,7 +99,6 @@
         [self.timer invalidate];
         self.timer = nil;
         [self showConclusion];
-//        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateTextFields) userInfo:nil repeats:YES];
     }
 }
 
@@ -115,30 +113,6 @@
     [alertView show];
 }
 
-- (NSMutableArray *)answers
-{
-    if (!_answers) _answers = [@[NSLocalizedString(@"Guess so", nil),
-                               NSLocalizedString(@"Don't know / NA", nil),
-                               NSLocalizedString(@"Buttload", nil),
-                               NSLocalizedString(@"Mushrooms, DMT", nil)] mutableCopy];
-    return _answers;
-}
-
-
-- (void)updateTextFields
-{
-    NSString *answer = [self.answers lastObject];
-    if (answer) {
-        [self.answers removeObject:answer];
-        UITextField *textField = [self textFieldWithTag:4 - [self.answers count]];
-        textField.text = answer;
-    } else {
-        [self.timer invalidate];
-        self.timer = nil;
-        self.answers = nil;
-        [self showConclusion];
-    }
-}
 
 - (UITextField *)textFieldWithTag:(NSInteger)tag
 {
