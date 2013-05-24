@@ -826,6 +826,8 @@
 		E5375FD31710C122008F378B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Christian Hansen";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Christian Hansen";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Trip Insurance\"",
@@ -836,6 +838,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "Reality Check";
+				PROVISIONING_PROFILE = "3DB773B8-8B60-4CC1-B8DF-9A3D343E14E6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3DB773B8-8B60-4CC1-B8DF-9A3D343E14E6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
