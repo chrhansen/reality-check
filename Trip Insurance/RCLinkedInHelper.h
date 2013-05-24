@@ -1,6 +1,6 @@
 //
-//  LBLinkedInHelper.h
-//  Lifebeat
+//  LinkedInHelper.h
+//  
 //
 //  Created by Christian Hansen on 01/11/12.
 //  Copyright (c) 2012 Kwamecorp. All rights reserved.

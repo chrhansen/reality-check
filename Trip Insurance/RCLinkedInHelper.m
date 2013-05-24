@@ -1,5 +1,5 @@
 //
-//  LBLinkedInHelper.m
+//  LinkedInHelper.m
 //  Reality Check
 //
 //  Created by Christian Hansen

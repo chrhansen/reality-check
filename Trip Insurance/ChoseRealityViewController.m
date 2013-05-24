@@ -8,6 +8,7 @@
 
 #import "ChoseRealityViewController.h"
 #import <Rdio/Rdio.h>
+#import "MKStoreManager.h"
 
 typedef enum {
     RealityStateNormal, 
@@ -80,6 +81,21 @@ typedef enum {
     }
 }
 
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"show texts"]) {
+        if ([MKStoreManager isFeaturePurchased:@"PremiumReality"]) {
+            return YES;
+        } else {
+            [self performSegueWithIdentifier:@"Show Store" sender:nil];
+        }
+        return NO;
+    }
+    return YES;
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -92,19 +108,19 @@ typedef enum {
     // Adjust button positions
     self.linkedInButton.center = CGPointMake(94, 70);
     self.tripTrackerButton.center = CGPointMake(227, 70);
-    self.textMessageButton.center = CGPointMake(94, 210);
+    self.soothingSoundsButton.center = CGPointMake(94, 210);
     self.playWithPuppiesButton.center = CGPointMake(227, 210);
     self.hellModeButton.center = CGPointMake(94, 350);
-    self.soothingSoundsButton.center = CGPointMake(227, 350);
-    
+    self.textMessageButton.center = CGPointMake(227, 350);
+
     CGFloat labelOffset = 60.0f;
     // Adjust label positions
     self.linkedInLabel.center = CGPointMake(94, 70+labelOffset);
     self.tripTrackerLabel.center = CGPointMake(227, 70+labelOffset);
-    self.textLabel.center = CGPointMake(94, 210+labelOffset);
+    self.soothingLabel.center = CGPointMake(94, 210+labelOffset);
     self.puppiesLabel.center = CGPointMake(227, 210+labelOffset);
     self.hellModeLabel.center = CGPointMake(94, 350+labelOffset);
-    self.soothingLabel.center = CGPointMake(227, 350+labelOffset);
+    self.textLabel.center = CGPointMake(227, 350+labelOffset);
 }
 
 
