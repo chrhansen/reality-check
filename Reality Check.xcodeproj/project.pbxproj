@@ -218,7 +218,6 @@
 		E5BCD01D174DAB9100691A09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		E5BCD01F174DAC0A00691A09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		E5BCD021174DAC0E00691A09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		E5BCD023174DBB1800691A09 /* RealityAPIKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RealityAPIKeys.h; path = "Trip Insurance/RealityAPIKeys.h"; sourceTree = "<group>"; };
 		E5BCD026174DCE4F00691A09 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		E5BCD027174DCE4F00691A09 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		E5D4EC8C1714124E004F91FD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -324,7 +323,6 @@
 				E55A8C9C1714146F00AFAE1D /* icon@2x.png */,
 				E5D4EC8C1714124E004F91FD /* icon.png */,
 				E5375FC91710C122008F378B /* MainStoryboard.storyboard */,
-				E5BCD023174DBB1800691A09 /* RealityAPIKeys.h */,
 				E5375FB71710C122008F378B /* Trip Insurance */,
 				E5375FB01710C122008F378B /* Frameworks */,
 				E5375FAF1710C122008F378B /* Products */,
