@@ -11,12 +11,14 @@
 
 @interface TripTrackerViewController () <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFields;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) MBProgressHUD *progressHUD;
 @property (nonatomic, strong) NSMutableArray *spinnerSteps;
 @property (nonatomic, strong) NSMutableArray *answers;
 @property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation TripTrackerViewController
@@ -26,7 +28,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
-
+    [self styleSubmitButton];
 	// Do any additional setup after loading the view.
 }
 
@@ -53,6 +55,15 @@
 - (IBAction)doneTapped:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)styleSubmitButton
+{
+    UIImage *buttonImage = [[UIImage imageNamed:@"whiteButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    UIImage *highlightedButtonImage = [[UIImage imageNamed:@"whiteButtonHighlight"] resizableImageWithCapInsets:UIEdgeInsetsMake(18, 18, 18, 18)];
+    [self.submitButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [self.submitButton setBackgroundImage:highlightedButtonImage forState:UIControlStateHighlighted];
+
 }
 
 - (IBAction)submit:(id)sender
@@ -88,7 +99,8 @@
         [self.progressHUD hide:YES];
         [self.timer invalidate];
         self.timer = nil;
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateTextFields) userInfo:nil repeats:YES];
+        [self showConclusion];
+//        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateTextFields) userInfo:nil repeats:YES];
     }
 }
 

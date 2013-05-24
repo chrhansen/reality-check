@@ -539,14 +539,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-Fq-tUi">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mushrooms, DMT" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-Fq-tUi">
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="gpp-Re-qFE" id="MC1-9R-Lsd"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzf-9L-CNh">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buttload" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzf-9L-CNh">
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -563,7 +563,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OV-p5-KFw">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Don't know / NA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OV-p5-KFw">
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -575,7 +575,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXM-u2-o0H">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess so" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXM-u2-o0H">
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                                 <connections>
@@ -662,6 +662,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="cJZ-Gi-p5d" id="6sE-Z3-czj"/>
+                        <outlet property="submitButton" destination="hHn-GD-Lnz" id="F62-cV-uaR"/>
                         <outletCollection property="textFields" destination="Bqm-Fq-tUi" id="CDn-4w-AML"/>
                         <outletCollection property="textFields" destination="6OV-p5-KFw" id="61K-I1-4T9"/>
                         <outletCollection property="textFields" destination="pXM-u2-o0H" id="ZkC-Gt-C0E"/>
@@ -994,125 +995,6 @@
         <image name="realityCheck_loginPage_linkedInLogo.png" width="282" height="62"/>
         <image name="realityCheck_loginPage_logo.png" width="512" height="177"/>
     </resources>
-    <classes>
-        <class className="ChoseRealityViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChoseRealityViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logoutOfRealityTapped:"/>
-                <relationship kind="action" name="toggleHellModeTapped:"/>
-                <relationship kind="action" name="upgradeToPremiumTapped:"/>
-                <relationship kind="outlet" name="hellModeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="hellModeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="linkedInButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="linkedInLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="playWithPuppiesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="puppiesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="soothingLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="soothingSoundsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textMessageButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tripTrackerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tripTrackerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LinkedInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedInViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="outlet" name="animatedLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageViewBackgroundView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="jobCompanyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="jobPositionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="profileImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="recommendationNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recommendationTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="skillCountLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginTapped:"/>
-            </relationships>
-        </class>
-        <class className="LoginWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelTapped:"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MusicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MusicViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="tappedDone:"/>
-                <relationship kind="outlet" name="backgroundLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PremiumRealityTapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PremiumRealityTapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="tapGesture:" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="outlet" name="tapMeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PuppiesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PuppiesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="handleLongPress:" candidateClass="UILongPressGestureRecognizer"/>
-                <relationship kind="outlet" name="doneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="StoreCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mainImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="smallImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="StoreViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="restoreTapped:"/>
-                <relationship kind="outlet" name="restoreButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="TripTrackerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TripTrackerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="submit:"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outletCollection" name="textFields" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

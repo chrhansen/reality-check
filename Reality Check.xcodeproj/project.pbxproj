@@ -74,6 +74,10 @@
 		E5523F0E174FEF69007D37C8 /* tanButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F0A174FEF68007D37C8 /* tanButtonHighlight.png */; };
 		E5523F0F174FEF69007D37C8 /* tanButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */; };
 		E5523F13174FF603007D37C8 /* UINavigationController+Rotations.m in Sources */ = {isa = PBXBuildFile; fileRef = E5523F12174FF603007D37C8 /* UINavigationController+Rotations.m */; };
+		E5523F18174FFD55007D37C8 /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F14174FFD55007D37C8 /* whiteButton.png */; };
+		E5523F19174FFD55007D37C8 /* whiteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F15174FFD55007D37C8 /* whiteButton@2x.png */; };
+		E5523F1A174FFD55007D37C8 /* whiteButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F16174FFD55007D37C8 /* whiteButtonHighlight.png */; };
+		E5523F1B174FFD55007D37C8 /* whiteButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5523F17174FFD55007D37C8 /* whiteButtonHighlight@2x.png */; };
 		E55A8C9B1714146C00AFAE1D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D4EC8C1714124E004F91FD /* icon.png */; };
 		E55A8C9D1714146F00AFAE1D /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E55A8C9C1714146F00AFAE1D /* icon@2x.png */; };
 		E5767FFD1711166F00DCC1E4 /* PuppiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */; };
@@ -193,6 +197,10 @@
 		E5523F0B174FEF69007D37C8 /* tanButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tanButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		E5523F11174FF602007D37C8 /* UINavigationController+Rotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotations.h"; sourceTree = "<group>"; };
 		E5523F12174FF603007D37C8 /* UINavigationController+Rotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotations.m"; sourceTree = "<group>"; };
+		E5523F14174FFD55007D37C8 /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
+		E5523F15174FFD55007D37C8 /* whiteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButton@2x.png"; sourceTree = "<group>"; };
+		E5523F16174FFD55007D37C8 /* whiteButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButtonHighlight.png; sourceTree = "<group>"; };
+		E5523F17174FFD55007D37C8 /* whiteButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		E55A8C9C1714146F00AFAE1D /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E5767FFB1711166F00DCC1E4 /* PuppiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuppiesViewController.h; sourceTree = "<group>"; };
 		E5767FFC1711166F00DCC1E4 /* PuppiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuppiesViewController.m; sourceTree = "<group>"; };
@@ -522,6 +530,10 @@
 		E5B94B1A1711FD1A00AD960F /* TripTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E5523F14174FFD55007D37C8 /* whiteButton.png */,
+				E5523F15174FFD55007D37C8 /* whiteButton@2x.png */,
+				E5523F16174FFD55007D37C8 /* whiteButtonHighlight.png */,
+				E5523F17174FFD55007D37C8 /* whiteButtonHighlight@2x.png */,
 				E5B94B231712033D00AD960F /* realityCheck_tripTrackerBlank.png */,
 			);
 			name = TripTracker;
@@ -650,6 +662,10 @@
 				E5523F0D174FEF69007D37C8 /* tanButton@2x.png in Resources */,
 				E5523F0E174FEF69007D37C8 /* tanButtonHighlight.png in Resources */,
 				E5523F0F174FEF69007D37C8 /* tanButtonHighlight@2x.png in Resources */,
+				E5523F18174FFD55007D37C8 /* whiteButton.png in Resources */,
+				E5523F19174FFD55007D37C8 /* whiteButton@2x.png in Resources */,
+				E5523F1A174FFD55007D37C8 /* whiteButtonHighlight.png in Resources */,
+				E5523F1B174FFD55007D37C8 /* whiteButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
