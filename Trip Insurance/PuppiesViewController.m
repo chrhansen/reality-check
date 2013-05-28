@@ -47,9 +47,9 @@
 -(void)styleButton
 {
     self.doneButton.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.doneButton.layer.shadowRadius = 5.0f;
+    self.doneButton.layer.shadowRadius = 4.0f;
     self.doneButton.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-    self.doneButton.layer.shadowOpacity = 0.7f;
+    self.doneButton.layer.shadowOpacity = 0.5f;
     self.doneButton.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     self.doneButton.layer.shouldRasterize = YES;
     self.doneButton.alpha = 0.7f;
