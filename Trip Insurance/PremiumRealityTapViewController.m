@@ -12,7 +12,7 @@
 @interface PremiumRealityTapViewController ()
 
 @property (nonatomic, strong) MBProgressHUD *wordHUD;
-@property (nonatomic, strong) NSArray *streams;
+@property (nonatomic, strong) NSMutableArray *streams;
 @property (nonatomic, strong) NSMutableArray *currentStream;
 @property (nonatomic) NSUInteger currentWordIndex;
 @property (nonatomic, strong) NSMutableArray *wordLocations;
@@ -141,25 +141,43 @@
     }
 }
 
+//Can we change the first line you see/tap through in Premium Reality to "Hey there. Everything is going to be just fine!" (instead of the one about your friends loving the shit out of you) It keeps better with our comedy script. Then can we change the second one back to "Everyone is proud of you, and you will feel better in the morning!"  Then the third one to: "Fuck. You're not STILL tripping are you?" Then the ones after that can be the same. 
 
-- (NSArray *)streams
+// #1: "Hey there. Everything is going to be just fine!"
+// #2: "Everyone is proud of you, and you will feel better in the morning!"
+// #3: "Fuck. You're not STILL tripping are you?"
+
+- (NSMutableArray *)streams
 {
-    if (!_streams) _streams = @[@"Your friends freaking love you",
-                                @"Your parents are super proud of you",
-                                @"You’re really really really REALLY good-looking",
-                                @"I mean your friends love the SHIT out of you",
-                                @"You inspire others all the freaking time without even trying",
-                                @"People look to you and think [“Right-On”]",
-                                @"You have natural sense of really incredible rhythm",
-                                @"Positive things spontaneously happen around you all the time and that’s pretty cool"];
+    if (!_streams) _streams = [@[@"Hey there. Everything is going to be just fine!",
+                               @"Everyone is proud of you, and you will feel better in the morning!",
+                               @"Fuck. You're not STILL tripping are you?",
+                               @"Your friends freaking love you",
+                               @"Your parents are super proud of you",
+                               @"You’re really really really REALLY good-looking",
+                               @"I mean your friends love the SHIT out of you",
+                               @"You inspire others all the freaking time without even trying",
+                               @"People look to you and think [“Right-On”]",
+                               @"You have natural sense of really incredible rhythm",
+                               @"Positive things spontaneously happen around you all the time and that’s pretty cool"] mutableCopy];
     return _streams;
 }
 
 - (NSMutableArray *)currentStream
 {
     if (!_currentStream) {
-        NSInteger randomIndex = arc4random() % [self.streams count];
-        _currentStream = [[[self.streams[randomIndex] copy] componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] mutableCopy];
+        
+        if ([self.streams count] == 0) {
+            self.streams = nil;
+        }
+        NSString *sentence = self.streams[0];
+        [self.streams removeObject:sentence];
+        _currentStream = [[sentence componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] mutableCopy];
+
+//        NSInteger randomIndex = arc4random() % [self.streams count];
+//        _currentStream = [[[self.streams[randomIndex] copy] componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] mutableCopy];
+        
+        
         self.currentWordIndex = 0;
         self.wordLocations = [NSMutableArray array];
     }
