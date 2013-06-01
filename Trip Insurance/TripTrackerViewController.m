@@ -28,14 +28,12 @@
     [super viewDidLoad];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
     [self styleSubmitButton];
-	// Do any additional setup after loading the view.
 }
 
-
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidLayoutSubviews
 {
-    [super viewWillAppear:animated];
-    [self.scrollView setContentSize:CGSizeMake(self.view.bounds.size.width, 800.0f)];
+    [super viewDidLayoutSubviews];
+    [self.scrollView setContentSize:CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height + 150)];
 }
 
 
@@ -70,6 +68,7 @@
     self.progressHUD =[[MBProgressHUD alloc] initWithView:self.view];
 	[self.view addSubview:self.progressHUD];
     self.progressHUD.labelText = @"Loading";
+    self.progressHUD.dimBackground = YES;
 	[self prepareSpinnerSteps];
     [self.progressHUD show:YES];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.2 target:self selector:@selector(updateSpinner) userInfo:nil repeats:YES];

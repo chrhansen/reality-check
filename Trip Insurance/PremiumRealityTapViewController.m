@@ -141,7 +141,6 @@
     }
 }
 
-//Can we change the first line you see/tap through in Premium Reality to "Hey there. Everything is going to be just fine!" (instead of the one about your friends loving the shit out of you) It keeps better with our comedy script. Then can we change the second one back to "Everyone is proud of you, and you will feel better in the morning!"  Then the third one to: "Fuck. You're not STILL tripping are you?" Then the ones after that can be the same. 
 
 // #1: "Hey there. Everything is going to be just fine!"
 // #2: "Everyone is proud of you, and you will feel better in the morning!"

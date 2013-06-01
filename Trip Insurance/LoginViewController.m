@@ -49,6 +49,9 @@
 
 
 
+
+
+
 - (IBAction)loginTapped:(id)sender
 {
     LoginWebViewController *webLoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginWebViewController"];
@@ -64,9 +67,9 @@
                              }
                              [weakSelf dismissViewControllerAnimated:YES completion:^{
                                  NSLog(@"completed login");
-                                 if ([RCLinkedInHelper.sharedHelper hasAccess]) {
-                                     [weakSelf performSegueWithIdentifier:@"show reality options" sender:weakSelf];
-                                 }
+//                                 if ([RCLinkedInHelper.sharedHelper hasAccess]) {
+//                                     [weakSelf performSegueWithIdentifier:@"show reality options" sender:weakSelf];
+//                                 }
                              }];
                          }];
                      }];
