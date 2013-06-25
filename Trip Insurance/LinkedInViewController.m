@@ -9,12 +9,20 @@
 #import "LinkedInViewController.h"
 #import "RCLinkedInHelper.h"
 #import <QuartzCore/QuartzCore.h>
+#import "LoginWebViewController.h"
+
+@interface LinkedInViewController () <LoginWebViewControllerDelegate>
+
+@property (nonatomic) BOOL sholdLogin;
+
+@end
 
 @implementation LinkedInViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.sholdLogin = YES;
     [self loadProfile];
     [self loadHighResPhoto];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"realityCheck_menuBarLogo.png"]];
@@ -23,6 +31,17 @@
     [self addTextViewBorder];
 	// Do any additional setup after loading the view.
 }
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.sholdLogin == YES
+        && ![[RCLinkedInHelper sharedHelper] hasAccess]) {
+        [self login];
+    }
+}
+
 
 
 - (void)viewDidLayoutSubviews
@@ -138,20 +157,61 @@
 }
 
 
-
-
-#pragma mark animations
-- (void)testAnimation
+#pragma mark -
+- (void)login
 {
-    [UIView animateWithDuration:2.0 animations:^{
-        CGAffineTransform transform = self.animatedLabel.transform;
-        transform = CGAffineTransformTranslate(transform, -180.0f, -130.0f);
-//        transform = CGAffineTransformRotate(transform, -M_PI_4);
-        self.animatedLabel.transform = transform;
-    } completion:^(BOOL finished) {
-        NSLog(@"next anim");
-    }];
+    LoginWebViewController *webLoginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginWebViewController"];
+    webLoginViewController.delegate = self;
+    __weak LinkedInViewController *weakSelf = self;
+    [self presentViewController:webLoginViewController
+                       animated:YES
+                     completion:^{
+                         [RCLinkedInHelper.sharedHelper loginWithWebView:webLoginViewController.webView completionHandler:^(BOOL granted, NSError *error) {
+                             if (!error) {
+                                 NSLog(@"LinkedIn login success");
+                             } else {
+                                 NSLog(@"LinkedIn login ERROR");
+                             }
+                             [weakSelf dismissViewControllerAnimated:YES completion:^{
+                                 NSLog(@"completed login");
+                                 if ([RCLinkedInHelper.sharedHelper hasAccess]) {
+                                     [weakSelf loadProfile];
+                                     [weakSelf loadHighResPhoto];
+                                 }
+                             }];
+                         }];
+                     }];
 }
 
+
+- (IBAction)logout
+{
+    [RCLinkedInHelper.sharedHelper logout];
+    [self removeWebViewCookies];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+- (void)removeWebViewCookies
+{
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *cookie in [storage cookies]) {
+        if (cookie.isSecure) {
+            [storage deleteCookie:cookie];
+        }
+    }
+}
+
+
+#pragma mark LoginWebViewControllerDelegate
+- (void)loginWebViewControllerDidTapCancel:(LoginWebViewController *)loginWebVC
+{
+    self.sholdLogin = NO;
+    __weak LinkedInViewController *weakSelf = self;
+    [loginWebVC dismissViewControllerAnimated:YES completion:^{
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
 
 @end

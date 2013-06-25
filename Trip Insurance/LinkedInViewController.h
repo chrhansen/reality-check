@@ -22,9 +22,6 @@
 #pragma mark Animation
 @property (weak, nonatomic) IBOutlet UILabel *animatedLabel;
 
-
-
-
 - (IBAction)doneTapped:(id)sender;
 
 @end

@@ -10,10 +10,11 @@
 
 @implementation LoginWebViewController
 
-
 - (IBAction)cancelTapped:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self.delegate respondsToSelector:@selector(loginWebViewControllerDidTapCancel:)]) {
+        [self.delegate loginWebViewControllerDidTapCancel:self];
+    }
 }
 
 @end

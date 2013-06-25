@@ -39,7 +39,6 @@
 		E5375FBE1710C122008F378B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FBD1710C122008F378B /* main.m */; };
 		E5375FC21710C122008F378B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FC11710C122008F378B /* AppDelegate.m */; };
 		E5375FCB1710C122008F378B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5375FC91710C122008F378B /* MainStoryboard.storyboard */; };
-		E5375FD61710C1AA008F378B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FD51710C1AA008F378B /* LoginViewController.m */; };
 		E5375FDB1710C5B1008F378B /* ChoseRealityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5375FDA1710C5B1008F378B /* ChoseRealityViewController.m */; };
 		E5375FE41710C7AF008F378B /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = E5375FDE1710C7AF008F378B /* Base64Transcoder.c */; };
 		E5375FE51710C7AF008F378B /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = E5375FE01710C7AF008F378B /* hmac.c */; };
@@ -141,8 +140,6 @@
 		E5375FC01710C122008F378B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5375FC11710C122008F378B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E5375FCA1710C122008F378B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		E5375FD41710C1AA008F378B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		E5375FD51710C1AA008F378B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E5375FD91710C5B1008F378B /* ChoseRealityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseRealityViewController.h; sourceTree = "<group>"; };
 		E5375FDA1710C5B1008F378B /* ChoseRealityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseRealityViewController.m; sourceTree = "<group>"; };
 		E5375FDE1710C7AF008F378B /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
@@ -571,8 +568,6 @@
 		E5E9CA89174EF2DC00ABAA64 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5375FD41710C1AA008F378B /* LoginViewController.h */,
-				E5375FD51710C1AA008F378B /* LoginViewController.m */,
 				E5375FED1710C889008F378B /* LoginWebViewController.h */,
 				E5375FEE1710C889008F378B /* LoginWebViewController.m */,
 				E5375FD91710C5B1008F378B /* ChoseRealityViewController.h */,
@@ -690,7 +685,6 @@
 			files = (
 				E5375FBE1710C122008F378B /* main.m in Sources */,
 				E5375FC21710C122008F378B /* AppDelegate.m in Sources */,
-				E5375FD61710C1AA008F378B /* LoginViewController.m in Sources */,
 				E5375FDB1710C5B1008F378B /* ChoseRealityViewController.m in Sources */,
 				E5375FE41710C7AF008F378B /* Base64Transcoder.c in Sources */,
 				E5375FE51710C7AF008F378B /* hmac.c in Sources */,

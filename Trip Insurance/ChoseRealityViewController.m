@@ -116,6 +116,10 @@ typedef enum {
 }
 
 
+
+
+
+
 - (void)adjustPositionsFor4InchPhone
 {
     // Adjust button positions
