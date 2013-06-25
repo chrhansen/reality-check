@@ -140,36 +140,36 @@
                         </subviews>
                         <color key="backgroundColor" red="0.09425765975075609" green="0.52436868706381545" blue="0.88578204719387754" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="c0a-oP-d6R" firstAttribute="baseline" secondItem="hEB-oB-wsx" secondAttribute="baseline" type="default" id="4Kb-BV-qGC"/>
                             <constraint firstItem="h9z-Ah-UoZ" firstAttribute="leading" secondItem="lZw-7I-etf" secondAttribute="leading" type="default" id="5FK-pk-QGb"/>
                             <constraint firstItem="E00-tD-Hpb" firstAttribute="centerX" secondItem="w7m-Y2-i95" secondAttribute="centerX" type="default" id="7Tq-cU-zku"/>
                             <constraint firstItem="h9z-Ah-UoZ" firstAttribute="trailing" secondItem="f1h-uh-uiK" secondAttribute="trailing" type="default" id="7co-e6-zRc"/>
                             <constraint firstItem="uNu-qJ-LY9" firstAttribute="leading" secondItem="Obd-ey-hVg" secondAttribute="leading" constant="43" id="8P5-9O-cKg"/>
+                            <constraint firstItem="Zcl-dD-iA7" firstAttribute="top" secondItem="Obd-ey-hVg" secondAttribute="top" constant="162" id="AFl-8m-SjI"/>
                             <constraint firstAttribute="bottom" secondItem="8Nx-Qm-bAt" secondAttribute="bottom" constant="14" id="EwP-FZ-QBy"/>
                             <constraint firstItem="Zcl-dD-iA7" firstAttribute="trailing" secondItem="MEn-cl-c8d" secondAttribute="trailing" type="default" id="F4R-b5-xLg"/>
                             <constraint firstItem="8V3-Ec-hF6" firstAttribute="leading" secondItem="c0a-oP-d6R" secondAttribute="leading" type="default" id="F4w-Jx-rgm"/>
                             <constraint firstItem="MEn-cl-c8d" firstAttribute="centerX" secondItem="uNu-qJ-LY9" secondAttribute="centerX" type="default" id="GhJ-Ab-rvK"/>
+                            <constraint firstItem="Zcl-dD-iA7" firstAttribute="centerX" secondItem="hEB-oB-wsx" secondAttribute="centerX" type="default" id="LSp-4t-qhN"/>
                             <constraint firstItem="lZw-7I-etf" firstAttribute="bottom" secondItem="MEn-cl-c8d" secondAttribute="bottom" type="default" id="MRc-za-p4c"/>
-                            <constraint firstItem="hEB-oB-wsx" firstAttribute="centerX" secondItem="Zcl-dD-iA7" secondAttribute="centerX" type="default" id="Owp-OX-cA0"/>
+                            <constraint firstItem="Zcl-dD-iA7" firstAttribute="bottom" secondItem="h9z-Ah-UoZ" secondAttribute="bottom" type="default" id="S33-Dx-7U7"/>
                             <constraint firstItem="Zcl-dD-iA7" firstAttribute="leading" secondItem="MEn-cl-c8d" secondAttribute="leading" type="default" id="UIa-RA-89t"/>
                             <constraint firstItem="lZw-7I-etf" firstAttribute="top" secondItem="MEn-cl-c8d" secondAttribute="top" type="default" id="WxU-VZ-YfI"/>
                             <constraint firstItem="8V3-Ec-hF6" firstAttribute="trailing" secondItem="c0a-oP-d6R" secondAttribute="trailing" type="default" id="XW1-S9-kBv"/>
                             <constraint firstAttribute="bottom" secondItem="w7m-Y2-i95" secondAttribute="bottom" constant="46" id="Ydx-CY-BQ6"/>
+                            <constraint firstAttribute="bottom" secondItem="c0a-oP-d6R" secondAttribute="bottom" constant="171" id="ZDl-po-8ZL"/>
                             <constraint firstItem="8Nx-Qm-bAt" firstAttribute="centerX" secondItem="f1h-uh-uiK" secondAttribute="centerX" type="default" id="dPz-WI-irS"/>
-                            <constraint firstItem="Zcl-dD-iA7" firstAttribute="top" secondItem="uNu-qJ-LY9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dzc-gs-0QE"/>
-                            <constraint firstItem="h9z-Ah-UoZ" firstAttribute="top" secondItem="8V3-Ec-hF6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ewb-35-vlc"/>
                             <constraint firstAttribute="trailing" secondItem="h9z-Ah-UoZ" secondAttribute="trailing" constant="45" id="fMl-cx-Znm"/>
-                            <constraint firstItem="w7m-Y2-i95" firstAttribute="top" secondItem="hEB-oB-wsx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hBW-oT-sP0"/>
+                            <constraint firstItem="h9z-Ah-UoZ" firstAttribute="top" secondItem="Zcl-dD-iA7" secondAttribute="top" type="default" id="foZ-3e-s0G"/>
                             <constraint firstItem="h9z-Ah-UoZ" firstAttribute="leading" secondItem="f1h-uh-uiK" secondAttribute="leading" type="default" id="hyM-sj-Cj3"/>
                             <constraint firstItem="h9z-Ah-UoZ" firstAttribute="trailing" secondItem="lZw-7I-etf" secondAttribute="trailing" type="default" id="j6G-mh-XrB"/>
-                            <constraint firstItem="f1h-uh-uiK" firstAttribute="top" secondItem="c0a-oP-d6R" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jP2-lw-NA0"/>
                             <constraint firstItem="8Nx-Qm-bAt" firstAttribute="baseline" secondItem="E00-tD-Hpb" secondAttribute="baseline" type="default" id="jvu-aF-Qzb"/>
                             <constraint firstItem="w7m-Y2-i95" firstAttribute="leading" secondItem="Zcl-dD-iA7" secondAttribute="leading" type="default" id="mqt-2k-Nvc"/>
                             <constraint firstItem="8V3-Ec-hF6" firstAttribute="baseline" secondItem="uNu-qJ-LY9" secondAttribute="baseline" type="default" id="qpI-ed-96Y"/>
                             <constraint firstItem="8Nx-Qm-bAt" firstAttribute="leading" secondItem="c0a-oP-d6R" secondAttribute="leading" type="default" id="rFx-ZN-RRg"/>
                             <constraint firstItem="MEn-cl-c8d" firstAttribute="top" secondItem="Obd-ey-hVg" secondAttribute="top" constant="12" id="sB8-80-xIs"/>
-                            <constraint firstItem="c0a-oP-d6R" firstAttribute="baseline" secondItem="hEB-oB-wsx" secondAttribute="baseline" type="default" id="u9O-k7-kBE"/>
+                            <constraint firstItem="w7m-Y2-i95" firstAttribute="top" secondItem="f1h-uh-uiK" secondAttribute="top" type="default" id="sLR-Jq-2r4"/>
                             <constraint firstItem="uNu-qJ-LY9" firstAttribute="top" secondItem="Obd-ey-hVg" secondAttribute="top" constant="98" id="vKG-tq-x6Y"/>
-                            <constraint firstItem="h9z-Ah-UoZ" firstAttribute="bottom" secondItem="Zcl-dD-iA7" secondAttribute="bottom" type="default" id="yPt-Ts-xEm"/>
                             <constraint firstItem="w7m-Y2-i95" firstAttribute="trailing" secondItem="Zcl-dD-iA7" secondAttribute="trailing" type="default" id="yQK-d5-zmA"/>
                             <constraint firstItem="f1h-uh-uiK" firstAttribute="bottom" secondItem="w7m-Y2-i95" secondAttribute="bottom" type="default" id="zbf-Gq-B6G"/>
                         </constraints>
@@ -491,12 +491,12 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyd-eW-6e4">
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Which drug(s) did you take?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzi-l3-gW8">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What have you ingested lately?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzi-l3-gW8">
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mushrooms, DMT" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-Fq-tUi">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-Fq-tUi">
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <connections>
@@ -532,7 +532,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess so" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXM-u2-o0H">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXM-u2-o0H">
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -932,120 +932,6 @@
         <image name="premium-reality.png" width="240" height="180"/>
         <image name="realityCheck_backgroundGradient@2x.png" width="639" height="1136"/>
     </resources>
-    <classes>
-        <class className="ChoseRealityViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChoseRealityViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="logoutOfRealityTapped:"/>
-                <relationship kind="action" name="toggleHellModeTapped:"/>
-                <relationship kind="action" name="upgradeToPremiumTapped:"/>
-                <relationship kind="outlet" name="hellModeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="hellModeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="linkedInButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="linkedInLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="playWithPuppiesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="puppiesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="soothingLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="soothingSoundsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textMessageButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tripTrackerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tripTrackerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LinkedInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedInViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="outlet" name="animatedLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="imageViewBackgroundView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="jobCompanyLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="jobPositionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="profileImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="recommendationNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recommendationTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="skillCountLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LoginWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelTapped:"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MusicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MusicViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="tappedDone:"/>
-                <relationship kind="outlet" name="backgroundLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PremiumRealityTapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PremiumRealityTapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="tapGesture:" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="outlet" name="tapMeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PuppiesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PuppiesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="handleLongPress:" candidateClass="UILongPressGestureRecognizer"/>
-                <relationship kind="outlet" name="doneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="StoreCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="buyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mainImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="smallImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="StoreViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="restoreTapped:"/>
-                <relationship kind="outlet" name="restoreButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="TripTrackerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TripTrackerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTapped:"/>
-                <relationship kind="action" name="submit:"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
-                <relationship kind="outletCollection" name="textFields" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

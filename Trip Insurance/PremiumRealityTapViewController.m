@@ -156,7 +156,7 @@
                                @"You’re really really really REALLY good-looking",
                                @"I mean your friends love the SHIT out of you",
                                @"You inspire others all the freaking time without even trying",
-                               @"People look to you and think [“Right-On”]",
+                               @"People look to you and think “Right-On”",
                                @"You have natural sense of really incredible rhythm",
                                @"Positive things spontaneously happen around you all the time and that’s pretty cool"] mutableCopy];
     return _streams;
